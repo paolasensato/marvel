@@ -39,7 +39,7 @@ if (empty($id)) {
     <h2 class="text-center">Characters</h2>
     <div class="row">
         <?php
-        $arquivo = "https://gateway.marvel.com:443/v1/public/comics/{$id}/characters?{}";
+        $arquivo = "https://gateway.marvel.com:443/v1/public/comics/{$id}/characters?{$url}";
 
         $dados =  file_get_contents($arquivo);
 
