@@ -30,7 +30,7 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="filmes">Filmes</a>
+                        <a class="nav-link" href="comics">Comics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="atores">Atores</a>
@@ -49,15 +49,13 @@
 
     <main class="container">
         <?php
-        // print_r( $_GET);
         $pagina = "home";
 
         if (isset($_GET["param"])) {
             $param = trim($_GET["param"]);
             $param = explode("/", $param);
 
-            // print_r($param);
-            $param = $param[0];
+            $pagina = $param[0];
         }
 
         $pagina = "paginas/{$pagina}.php";
