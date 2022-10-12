@@ -36,6 +36,9 @@
                         <a class="nav-link" href="characters">Characters</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="series">Series</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="contato">Contato</a>
                     </li>
                 </ul>
