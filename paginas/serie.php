@@ -5,7 +5,6 @@
         include "erro.php";
     } else {
         $arquivo = "https://gateway.marvel.com:443/v1/public/series/{$id}?{$url}";
-        print($arquivo);
         $dados = file_get_contents($arquivo);
         $dados = json_decode($dados);
 
