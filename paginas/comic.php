@@ -42,7 +42,6 @@ if (empty($id)) {
             <div class="carousel-inner d-flex d-inline-block">
                 <?php
                 $arquivo = "https://gateway.marvel.com:443/v1/public/comics/{$id}/characters?{$url}";
-
                 $dados =  file_get_contents($arquivo);
                 $dados = json_decode($dados);
 
@@ -66,9 +65,9 @@ if (empty($id)) {
                             </p>
                         </div>
                     </div>
-                        <?php
-                        }
-                        ?>
+                <?php
+                }
+                ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev" onclick="sliderScrollLeft()">
                 <span class="carousel-control-prev-icon bg-dark border border-dark" aria-hidden="true"></span>
