@@ -9,12 +9,12 @@
 .card .titulo {
     height: 5 rem;
 }
-.carousel {
-    width: 75vw;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+.carousel-inner {
+    width: auto;
+    height: 400px;
+    overflow: hidden;
 }
 
-.carousel::-webkit-scrollbar {
+.carousel-inner::-webkit-scrollbar {
     display: none;
 }
