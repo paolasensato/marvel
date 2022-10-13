@@ -33,9 +33,7 @@
     <div class="row">
         <?php
             $arquivo = "https://gateway.marvel.com:443/v1/public/series/{$id}/characters?{$url}";
-
             $dados =  file_get_contents($arquivo);
-
             $dados = json_decode($dados);
 
 
@@ -66,9 +64,7 @@
     <div class="row">
         <?php
         $arquivo = "https://gateway.marvel.com:443/v1/public/series/{$id}/creators?{$url}";
-
         $dados = file_get_contents($arquivo);
-
         $dados = json_decode($dados);
 
         foreach ($dados->data->results as $creators) {
@@ -77,7 +73,6 @@
             $image = $path . "." . $extension;
             $id = $creators->id;
             $fullName = $creators->fullName;
-
         ?>
             <div class="col-12 col-md-3">
                 <div class="card text-center">
@@ -88,7 +83,6 @@
                         </strong>
                     <p>
                         <a href="creators/<?= $id ?>" class="btn btn-warning">See More</a>
-                    </p>
                     </p>
                 </div>
             </div>
