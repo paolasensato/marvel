@@ -3,10 +3,8 @@
 </h1>
 <div class="row">
     <?php
-    $arquivo = "http://gateway.marvel.com/v1/public/comics?{$url}";
-
+    $arquivo = "{$url}/comics?{$apiKey}";
     $dados = file_get_contents($arquivo);
-
     $dados = json_decode($dados);
 
     foreach ($dados->data->results as $comics) {
