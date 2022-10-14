@@ -33,6 +33,9 @@
                         <a class="nav-link" href="comics">Comics</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="events">Events</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="characters">Characters</a>
                     </li>
                     <li class="nav-item">
