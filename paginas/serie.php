@@ -81,6 +81,7 @@
                         <strong>
                             <?= $fullName ?>
                         </strong>
+                    </p>
                     <p>
                         <a href="creators/<?= $id ?>" class="btn btn-warning">See More</a>
                     </p>
