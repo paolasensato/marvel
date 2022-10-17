@@ -4,7 +4,7 @@
     if (empty($id)) {
         include 'erro.php';
     } else {
-        $arquivo = "https://gateway.marvel.com:443/v1/public/events/{$id}?{$url}";
+        $arquivo = "{$url}/events/{$id}?{$apiKey}";
 
         $dados = file_get_contents($arquivo);
 
@@ -35,7 +35,7 @@
     <h2 class="text-center">Characters</h2>
     <div class="row">
         <?php
-            $arquivo = "https://gateway.marvel.com:443/v1/public/events/{$id}/characters?{$url}";
+            $arquivo = "{$url}/events/{$id}/characters?{$apiKey}";
             $dados = file_get_contents($arquivo);
             $dados = json_decode($dados);
 
@@ -67,7 +67,7 @@
     <h2 class="text-center">Creators</h2>
     <div class="row">
         <?php
-        $arquivo = "https://gateway.marvel.com:443/v1/public/events/{$id}/creators?{$url}";
+        $arquivo = "{$url}/events/{$id}/creators?{$apiKey}";
     
         $dados = file_get_contents($arquivo);
 
@@ -98,7 +98,7 @@
     <h2 class="text-center">Comics</h2>
     <div class="row">
         <?php
-            $arquivo = "https://gateway.marvel.com:443/v1/public/events/{$id}/comics?{$url}";
+            $arquivo = "{$url}/events/{$id}/comics?{$apiKey}";
             $dados = file_get_contents($arquivo);
             $dados = json_decode($dados);
 
@@ -129,7 +129,7 @@
     <h2 class="text-center">Series</h2>
     <div class="row">
         <?php
-            $arquivo = "https://gateway.marvel.com:443/v1/public/events/{$id}/series?{$url}";
+            $arquivo = "{$url}/events/{$id}/series?{$apiKey}";
             $dados = file_get_contents($arquivo);
             $dados = json_decode($dados);
 
@@ -159,7 +159,7 @@
     <h2 class="text-center">Stories</h2>
     <div class="row">
         <?php
-            $arquivo = "https://gateway.marvel.com:443/v1/public/events/{$id}/stories?{$url}";
+            $arquivo = "{$url}/events/{$id}/stories?{$apiKey}";
             $dados = file_get_contents($arquivo);
             $dados = json_decode($dados);
 

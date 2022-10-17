@@ -1,7 +1,7 @@
 <h1 class="text-center">Series</h1>
 <div class="row">
     <?php
-        $arquivo = "https://gateway.marvel.com:443/v1/public/series?{$url}";
+        $arquivo = "{$url}/series?{$apiKey}";
         $dados = file_get_contents($arquivo);
         $dados = json_decode($dados);
 

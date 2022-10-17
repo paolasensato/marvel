@@ -4,7 +4,7 @@
     if (empty($id)) {
         include "erro.php";
     } else {
-        $arquivo = "https://gateway.marvel.com:443/v1/public/series/{$id}?{$url}";
+        $arquivo = "{$url}/series/{$id}?{$apiKey}";
         $dados = file_get_contents($arquivo);
         $dados = json_decode($dados);
 
@@ -32,7 +32,7 @@
     <h2 class="text-center">Characters</h2>
     <div class="row">
         <?php
-            $arquivo = "https://gateway.marvel.com:443/v1/public/series/{$id}/characters?{$url}";
+            $arquivo = "{$url}/series/{$id}/characters?{$apiKey}";
             $dados =  file_get_contents($arquivo);
             $dados = json_decode($dados);
 
@@ -63,7 +63,7 @@
     <h2 class="text-center">Creators</h2>
     <div class="row">
         <?php
-        $arquivo = "https://gateway.marvel.com:443/v1/public/series/{$id}/creators?{$url}";
+        $arquivo = "{$url}/series/{$id}/creators?{$apiKey}";
         $dados = file_get_contents($arquivo);
         $dados = json_decode($dados);
 
