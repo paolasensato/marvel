@@ -18,7 +18,7 @@ if (empty($id)) {
     $description = $comic->description;
     $path = $comic->thumbnail->path;
     $extension = $comic->thumbnail->extension;
-    $image = $path . "." . $extension;
+    $image = $path . "/portrait_uncanny." . $extension;
 ?>
     <div class="card">
         <div class="row">
@@ -64,13 +64,13 @@ if (empty($id)) {
                                     foreach ($dados->data->results as $characters) {
                                         $path = $characters->thumbnail->path;
                                         $extension = $characters->thumbnail->extension;
-                                        $image = $path . "." . $extension;
+                                        $image = $path . "/portrait_uncanny." . $extension;
                                         $name = $characters->name;
                                         $id = $characters->id;
                                 ?>
                                     <div class="col-12 col-md-3 px-1">
                                         <div class="card card-body h-100 text-center">
-                                            <img class="img-fluid h-75" src="<?= $image ?>" alt="<?= $name ?>">
+                                            <img class="img-fluid w-100 h-75" src="<?= $image ?>" alt="<?= $name ?>">
                                             <p class="titulo">
                                                 <strong>
                                                     <?= $name ?>
@@ -114,14 +114,14 @@ if (empty($id)) {
                 foreach ($dados->data->results as $creators) {
                     $path = $creators->thumbnail->path;
                     $extension = $creators->thumbnail->extension;
-                    $image = $path . "." . $extension;
+                    $image = $path . "/portrait_uncanny." . $extension;
                     $id = $creators->id;
                     $fullName = $creators->fullName;
     
                     ?>
                         <div class="col-12 col-md-3">
                             <div class="card text-center">
-                                <img src="<?= $image?>" alt="<?= $fullName?>">
+                                <img src="<?= $image?>" alt="<?= $fullName?>" class="w-100">
                                 <p class="titulo">
                                     <strong>
                                         <?=$fullName?>
