@@ -9,7 +9,8 @@
 
     $hash = gerarhash($privatekey, $plublickey, $time);
 
-    $url = "ts={$time}&apikey={$plublickey}&hash={$hash}";
+    $url = "https://gateway.marvel.com:443/v1/public/";
+    $apiKey = "ts={$time}&apikey={$plublickey}&hash={$hash}";
 
     echo $url;
 

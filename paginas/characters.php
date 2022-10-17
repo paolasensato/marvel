@@ -1,9 +1,9 @@
 <h1 class="text-center">
-    Comics
+    Characters
 </h1>
 <div class="row">
     <?php
-    $arquivo = "{$url}/comics?{$apiKey}";
+    $arquivo = "{$url}/characters?{$apiKey}";
     $dados = file_get_contents($arquivo);
     $dados = json_decode($dados);
 
@@ -11,17 +11,17 @@
         $path = $comics->thumbnail->path;
         $extension = $comics->thumbnail->extension;
         $image = $path .".". $extension;
-        $title = $comics->title;
+        $name = $comics->name;
         $id = $comics->id;
 
     ?>
         <div class="col-12 col-md-3">
             <div class="card">
-                <img src="<?= $image ?>" alt="<?= $title ?>">
+                <img src="<?= $image ?>" alt="<?= $name ?>">
                 <div class="card-body text-center">
-                    <p class="titulo"><strong><?= $title?></strong></p>
+                    <p class="titulo"><strong><?= $name?></strong></p>
                     <p>
-                        <a href="comic/<?= $id?>" class="btn btn-warning">Ver detalhes</a>
+                        <a href="character/<?= $id?>" class="btn btn-warning">Ver detalhes</a>
                     </p>
                 </div>
             </div>
