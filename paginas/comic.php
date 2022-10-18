@@ -32,7 +32,8 @@ if (empty($id)) {
                     <?php 
                         if(empty($description)) {
                             ?>
-                                <p>Description not available. For more information 
+                                <p>
+                                    Description not available. For more information 
                                     <a href="https://www.marvel.com/" target="blank">click here</a>
                                 </p>
                             <?php
@@ -97,41 +98,40 @@ if (empty($id)) {
             <?php
         }
         
-        $arquivo = "{$url}/comics/{$id}/creators?{$apiKey}";
-        $dados = file_get_contents($arquivo);
-        $dados = json_decode($dados);
-        
-        if(!empty($dados->data->results)){
+    $arquivo = "{$url}/comics/{$id}/creators?{$apiKey}";
+    $dados = file_get_contents($arquivo);
+    $dados = json_decode($dados);
+    
+    if(!empty($dados->data->results)){
+        ?>
+            <h2 class="text-center">Creators</h2>
+            <div class="row">
+            <?php
+                foreach ($dados->data->results as $creators) {
+                    $path = $creators->thumbnail->path;
+                    $extension = $creators->thumbnail->extension;
+                    $image = $path . "/portrait_uncanny." . $extension;
+                    $id = $creators->id;
+                    $fullName = $creators->fullName;
             ?>
-                <h2 class="text-center">Creators</h2>
-                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="card text-center">
+                            <img src="<?= $image?>" alt="<?= $fullName?>" class="w-100">
+                            <p class="titulo">
+                                <strong>
+                                    <?=$fullName?>
+                                </strong>
+                                <p>
+                                    <a href="creators/<?=$id?>" class="btn btn-warning"> See More</a>
+                                </p>
+                            </p>
+                        </div>
+                    </div>
             <?php
-                    foreach ($dados->data->results as $creators) {
-                        $path = $creators->thumbnail->path;
-                        $extension = $creators->thumbnail->extension;
-                        $image = $path . "/portrait_uncanny." . $extension;
-                        $id = $creators->id;
-                        $fullName = $creators->fullName;
-
-                        ?>
-                            <div class="col-12 col-md-3">
-                                <div class="card text-center">
-                                    <img src="<?= $image?>" alt="<?= $fullName?>" class="w-100">
-                                    <p class="titulo">
-                                        <strong>
-                                            <?=$fullName?>
-                                        </strong>
-                                        <p>
-                                            <a href="creators/<?=$id?>" class="btn btn-warning"> See More</a>
-                                        </p>
-                                    </p>
-                                </div>
-                            </div>
-                            <?php
-                    }
-                    ?>
-                </div>
-            <?php
-        }
+                }
+            ?>
+            </div>
+        <?php
+    }
 }
-?>
+        ?>
