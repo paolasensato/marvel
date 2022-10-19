@@ -3,7 +3,7 @@
 </h1>
 <div class="row">
         <?php
-        $arquivo = "http://gateway.marvel.com/v1/public/events?{$url}";
+        $arquivo = "{$url}/events?{$apiKey}";
         $dados = file_get_contents($arquivo);
         $dados = json_decode($dados);
 
