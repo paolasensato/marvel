@@ -17,80 +17,104 @@
         $image = $path . "/portrait_uncanny." . $extension;
 
 ?>
+    <h1 class="text-center my-5">Serie</h1>
     <div class="card">
         <div class="row">
             <div class="col-12 col-md-3">
-                <img src="<?= $image ?>" alt="<?= $name ?>">
+                <img src="<?= $image ?>" alt="<?= $name ?>" class="w-100">
             </div>
             <div class="col-12 col-md-9">
-                <h1 class="card-title text-center"><?= $title ?></h1>
-                <p><?= $description ?></p>
+                <h3 class="card-title text-center"><?= $title ?></h3>
+                <p>
+                    <?php 
+                        if(empty($description)) {
+                            ?>
+                                <p>
+                                    Description not available. For more information 
+                                    <a href="https://www.marvel.com/" target="blank">click here</a>
+                                </p>
+                            <?php
+                        } else {
+                            ?>
+                                <p><?= $description ?></p>
+                            <?php
+                        }
+                    ?>
+                </p>
             </div>
         </div>
     </div>
 
-    <h2 class="text-center">Characters</h2>
-    <div class="row">
-        <?php
-            $arquivo = "{$url}/series/{$id}/characters?{$apiKey}";
-            $dados =  file_get_contents($arquivo);
-            $dados = json_decode($dados);
+    <?php
+        $arquivo = "{$url}/series/{$id}/characters?{$apiKey}";
+        $dados =  file_get_contents($arquivo);
+        $dados = json_decode($dados);
 
-
-            foreach ($dados->data->results as $characters) {
-                $path = $characters->thumbnail->path;
-                $extension = $characters->thumbnail->extension;
-                $image = $path . "." . $extension;
-                $name = $characters->name;
-                $id = $characters->id;
+        if (!empty($dados->data->results)) {
+    ?>        
+            <h2 class="text-center">Characters</h2>
+            <div class="row">
+            <?php
+                foreach ($dados->data->results as $characters) {
+                    $path = $characters->thumbnail->path;
+                    $extension = $characters->thumbnail->extension;
+                    $image = $path . "." . $extension;
+                    $name = $characters->name;
+                    $id = $characters->id;
+            ?>
+                    <div class="col-12 col-md-3">
+                        <div class="card text-center">
+                            <img src="<?= $image ?>" alt="<?= $name ?>">
+                            <p class="titulo">
+                                <strong><?= $name ?></strong>
+                            </p>
+                            <p>
+                                <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
+                            </p>
+                        </div>
+                    </div>
+            <?php
+                }
         ?>
-            <div class="col-12 col-md-3">
-                <div class="card text-center">
-                    <img src="<?= $image ?>" alt="<?= $name ?>">
-                    <p class="titulo">
-                        <strong><?= $name ?></strong>
-                    </p>
-                    <p>
-                        <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
-                    </p>
-                </div>
             </div>
         <?php
         }
-        ?>
-    </div>
 
-    <h2 class="text-center">Creators</h2>
-    <div class="row">
-        <?php
         $arquivo = "{$url}/series/{$id}/creators?{$apiKey}";
         $dados = file_get_contents($arquivo);
         $dados = json_decode($dados);
 
-        foreach ($dados->data->results as $creators) {
-            $path = $creators->thumbnail->path;
-            $extension = $creators->thumbnail->extension;
-            $image = $path . "." . $extension;
-            $id = $creators->id;
-            $fullName = $creators->fullName;
+        if (!empty($dados->data->results)) {
         ?>
-            <div class="col-12 col-md-3">
-                <div class="card text-center">
-                    <img src="<?= $image ?>" alt="<?= $fullName ?>">
-                    <p class="titulo">
-                        <strong>
-                            <?= $fullName ?>
-                        </strong>
-                    </p>
-                    <p>
-                        <a href="creators/<?= $id ?>" class="btn btn-warning">See More</a>
-                    </p>
+            <h2 class="text-center">Creators</h2>
+            <div class="row">
+            <?php
+
+            foreach ($dados->data->results as $creators) {
+                $path = $creators->thumbnail->path;
+                $extension = $creators->thumbnail->extension;
+                $image = $path . "." . $extension;
+                $id = $creators->id;
+                $fullName = $creators->fullName;
+            ?>
+                <div class="col-12 col-md-3">
+                    <div class="card text-center">
+                        <img src="<?= $image ?>" alt="<?= $fullName ?>">
+                        <p class="titulo">
+                            <strong>
+                                <?= $fullName ?>
+                            </strong>
+                        </p>
+                        <p>
+                            <a href="creators/<?= $id ?>" class="btn btn-warning">See More</a>
+                        </p>
+                    </div>
                 </div>
+                <?php
+            }
+                ?>
             </div>
-        <?php
+            <?php
         }
-        ?>
-    </div>
-<?php
 }
 ?>

@@ -45,6 +45,9 @@
                         <a class="nav-link" href="stories">Stories</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="creators">Creators</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="contato">Contato</a>
                     </li>
                 </ul>
