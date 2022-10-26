@@ -52,7 +52,9 @@ if (empty($id)) {
                     <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
                         <p class="titulo">
-                            <strong><?= $title ?></strong>
+                            <strong>
+                                <?= $title ?>
+                            </strong>
                         </p>
                         <p>
                             <a href="comic/<?= $id ?>" class="btn btn-warning">See more</a>
@@ -81,10 +83,12 @@ if (empty($id)) {
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
-                    <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
                         <p class="titulo">
-                            <strong><?= $title ?></strong>
+                            <strong>
+                                <?= $title ?>
+                            </strong>
                         </p>
                         <p>
                             <a href="serie/<?= $id ?>" class="btn btn-warning">See more</a>
@@ -113,10 +117,12 @@ if (empty($id)) {
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
-                    <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
                         <p class="titulo">
-                            <strong><?= $title ?></strong>
+                            <strong>
+                                <?= $title ?>
+                            </strong>
                         </p>
                         <p>
                             <a href="storie/<?= $id ?>" class="btn btn-warning">See more</a>
@@ -145,10 +151,12 @@ if (empty($id)) {
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
-                    <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="text-center">
                         <p class="titulo">
-                            <strong><?= $title ?></strong>
+                            <strong>
+                                <?= $title ?>
+                            </strong>
                         </p>
                         <p>
                             <a href="event/<?= $id ?>" class="btn btn-warning">See more</a>
