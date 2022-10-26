@@ -1,5 +1,5 @@
 <h1 class="text-center">
-    Comics
+    Events
 </h1>
 <div class="row">
         <?php
@@ -10,7 +10,7 @@
         foreach ($dados->data->results as $comics) {
             $path = $comics->thumbnail->path;
             $extension = $comics->thumbnail->extension;
-            $image = $path .".". $extension;
+            $image = $path ."/portrait_incredible.". $extension;
             $title = $comics->title;
             $id = $comics->id;
     ?>
@@ -18,9 +18,13 @@
         <div class="card">
             <img src="<?= $image ?>" alt="<?= $title ?>">
             <div class="card-body text-center">
-                <p class="titulo"><strong><?= $title?></strong></p>
+                <p class="titulo">
+                    <strong>
+                        <?= $title ?>
+                    </strong>
+                </p>
                 <p>
-                    <a href="event/<?= $id?>" class="btn btn-warning">See more</a>
+                    <a href="event/<?= $id ?>" class="btn btn-warning">See more</a>
                 </p>
             </div>
         </div>

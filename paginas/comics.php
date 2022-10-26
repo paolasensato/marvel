@@ -10,7 +10,7 @@
     foreach ($dados->data->results as $comics) {
         $path = $comics->thumbnail->path;
         $extension = $comics->thumbnail->extension;
-        $image = $path .".". $extension;
+        $image = $path ."/portrait_incredible.". $extension;
         $title = $comics->title;
         $id = $comics->id;
 
@@ -19,9 +19,13 @@
             <div class="card">
                 <img src="<?= $image ?>" alt="<?= $title ?>">
                 <div class="card-body text-center">
-                    <p class="titulo"><strong><?= $title?></strong></p>
+                    <p class="titulo">
+                        <strong>
+                            <?= $title ?>
+                        </strong>
+                    </p>
                     <p>
-                        <a href="comic/<?= $id?>" class="btn btn-warning">Ver detalhes</a>
+                        <a href="comic/<?= $id?>" class="btn btn-warning">See more</a>
                     </p>
                 </div>
             </div>

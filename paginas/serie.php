@@ -14,7 +14,7 @@
         $title = $serie->title;
         $description = $serie->description;
         $extension = $serie->thumbnail->extension;
-        $image = $path . "/portrait_uncanny." . $extension;
+        $image = $path ."/portrait_incredible.". $extension;
 
 ?>
     <h1 class="text-center my-5">Serie</h1>
@@ -58,19 +58,23 @@
                 foreach ($dados->data->results as $characters) {
                     $path = $characters->thumbnail->path;
                     $extension = $characters->thumbnail->extension;
-                    $image = $path . "." . $extension;
+                    $image = $path ."/portrait_incredible.". $extension;
                     $name = $characters->name;
                     $id = $characters->id;
             ?>
                     <div class="col-12 col-md-3">
-                        <div class="card text-center">
+                        <div class="card">
                             <img src="<?= $image ?>" alt="<?= $name ?>">
-                            <p class="titulo">
-                                <strong><?= $name ?></strong>
-                            </p>
-                            <p>
-                                <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
-                            </p>
+                            <div class="card-body text-center">
+                                <p class="titulo">
+                                    <strong>
+                                        <?= $name ?>
+                                    </strong>
+                                </p>
+                                <p>
+                                    <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
             <?php
@@ -93,21 +97,23 @@
             foreach ($dados->data->results as $creators) {
                 $path = $creators->thumbnail->path;
                 $extension = $creators->thumbnail->extension;
-                $image = $path . "." . $extension;
+                $image = $path ."/portrait_incredible.". $extension;
                 $id = $creators->id;
                 $fullName = $creators->fullName;
             ?>
                 <div class="col-12 col-md-3">
-                    <div class="card text-center">
+                    <div class="card">
                         <img src="<?= $image ?>" alt="<?= $fullName ?>">
-                        <p class="titulo">
-                            <strong>
-                                <?= $fullName ?>
-                            </strong>
-                        </p>
-                        <p>
-                            <a href="creators/<?= $id ?>" class="btn btn-warning">See More</a>
-                        </p>
+                        <div class="card-body text-center">
+                            <p class="titulo">
+                                <strong>
+                                    <?= $fullName ?>
+                                </strong>
+                            </p>
+                            <p>
+                                <a href="creators/<?= $id ?>" class="btn btn-warning">See more</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <?php
