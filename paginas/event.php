@@ -14,7 +14,7 @@
         $description = $comic->description;
         $path = $comic->thumbnail->path;
         $extension = $comic->thumbnail->extension;
-        $image = $path ."/portrait_incredible.". $extension;
+        $image = $path .$imageSizeUrl. $extension;
 ?>
     <h1 class="text-center my-5">Event</h1>
     <div class="card">
@@ -57,7 +57,7 @@
                 foreach ($dados->data->results as $characters) {
                     $path = $characters->thumbnail->path;
                     $extension = $characters->thumbnail->extension;
-                    $image = $path ."/portrait_incredible.". $extension;
+                    $image = $path .$imageSizeUrl. $extension;
                     $id = $characters->id;
                     $name = $characters->name;
             ?>
@@ -96,7 +96,7 @@
             foreach ($dados->data->results as $creators) {
                 $path = $creators->thumbnail->path;
                 $extension = $creators->thumbnail->extension;
-                $image = $path ."/portrait_incredible.". $extension;
+                $image = $path .$imageSizeUrl. $extension;
                 $id = $creators->id;
                 $fullName = $creators->fullName;
         ?>
@@ -134,7 +134,7 @@
             foreach ($dados->data->results as $comics) {
                 $path = $comics->thumbnail->path;
                 $extension = $comics->thumbnail->extension;
-                $image = $path ."/portrait_incredible.". $extension;
+                $image = $path .$imageSizeUrl. $extension;
                 $title = $comics->title;
                 $id = $comics->id;
         ?>
@@ -174,7 +174,7 @@
                 $title = $series->title;
                 $path = $series->thumbnail->path;
                 $extension = $series->thumbnail->extension;
-                $image = $path ."/portrait_incredible.". $extension;
+                $image = $path .$imageSizeUrl. $extension;
         ?>
                 <div class="col-12 col-md-3">
                     <div class="card">
@@ -212,7 +212,7 @@
                 $title = $stories->title;
                 $path = $stories->thumbnail->path ?? null;
                 $extension = $stories->thumbnail->extension ?? null;
-                $image = $path ."/portrait_incredible.". $extension;
+                $image = $path .$imageSizeUrl. $extension;
         ?>
                 <div class="col-12 col-md-3">
                     <div class="card">

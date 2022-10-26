@@ -14,7 +14,7 @@
         $title = $serie->title;
         $description = $serie->description;
         $extension = $serie->thumbnail->extension;
-        $image = $path ."/portrait_incredible.". $extension;
+        $image = $path .$imageSizeUrl. $extension;
 
 ?>
     <h1 class="text-center my-5">Serie</h1>
@@ -58,7 +58,7 @@
                 foreach ($dados->data->results as $characters) {
                     $path = $characters->thumbnail->path;
                     $extension = $characters->thumbnail->extension;
-                    $image = $path ."/portrait_incredible.". $extension;
+                    $image = $path .$imageSizeUrl. $extension;
                     $name = $characters->name;
                     $id = $characters->id;
             ?>
@@ -97,7 +97,7 @@
             foreach ($dados->data->results as $creators) {
                 $path = $creators->thumbnail->path;
                 $extension = $creators->thumbnail->extension;
-                $image = $path ."/portrait_incredible.". $extension;
+                $image = $path .$imageSizeUrl. $extension;
                 $id = $creators->id;
                 $fullName = $creators->fullName;
             ?>

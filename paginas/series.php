@@ -10,7 +10,7 @@
             $title = $series->title;
             $path = $series->thumbnail->path;
             $extension = $series->thumbnail->extension;
-            $image = $path ."/portrait_incredible.". $extension;
+            $image = $path .$imageSizeUrl. $extension;
             ?>
                 <div class="col-12 col-md-3">
                     <div class="card">

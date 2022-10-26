@@ -10,7 +10,7 @@
     foreach ($dados->data->results as $comics) {
         $path = $comics->thumbnail->path;
         $extension = $comics->thumbnail->extension;
-        $image = $path ."/portrait_incredible.". $extension;
+        $image = $path .$imageSizeUrl. $extension;
         $name = $comics->name;
         $id = $comics->id;
 

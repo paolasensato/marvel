@@ -16,7 +16,7 @@ if (empty($id)) {
 
     $path = $creator->thumbnail->path;
     $extension = $creator->thumbnail->extension;
-    $image = $path ."/portrait_incredible.". $extension;
+    $image = $path .$imageSizeUrl. $extension;
     $name = $creator->fullName;
 
 ?>
@@ -45,7 +45,7 @@ if (empty($id)) {
             $title = $comics->title;
             $path = $comics->thumbnail->path;
             $extension = $comics->thumbnail->extension;
-            $image = $path . "/portrait_incredible." . $extension;
+            $image = $path . $imageSizeUrl . $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
@@ -83,7 +83,7 @@ if (empty($id)) {
                 $title = $series->title;
                 $path = $series->thumbnail->path;
                 $extension = $series->thumbnail->extension;
-                $image = $path ."/portrait_incredible.". $extension;
+                $image = $path .$imageSizeUrl. $extension;
             ?>
                 <div class="col-12 col-md-3">
                     <div class="card">
@@ -121,7 +121,7 @@ if (empty($id)) {
                 $title = $stories->title;
                 $path = $stories->thumbnail->path ?? null;
                 $extension = $stories->thumbnail->extension ?? null;
-                $image = $path ."/portrait_incredible.". $extension;
+                $image = $path .$imageSizeUrl. $extension;
         ?>
                 <div class="col-12 col-md-3">
                     <div class="card">
@@ -159,7 +159,7 @@ if (empty($id)) {
             $title = $events->title;
             $path = $events->thumbnail->path;
             $extension = $events->thumbnail->extension;
-            $image = $path ."/portrait_incredible.". $extension;
+            $image = $path .$imageSizeUrl. $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">

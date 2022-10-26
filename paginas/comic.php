@@ -18,7 +18,7 @@ if (empty($id)) {
     $description = $comic->description;
     $path = $comic->thumbnail->path;
     $extension = $comic->thumbnail->extension;
-    $image = $path . "/portrait_incredible." . $extension;
+    $image = $path . $imageSizeUrl . $extension;
 ?>
     <h1 class="text-center my-5">Comic</h1>
     <div class="card">
@@ -64,7 +64,7 @@ if (empty($id)) {
                                 foreach ($dados->data->results as $characters) {
                                     $path = $characters->thumbnail->path;
                                     $extension = $characters->thumbnail->extension;
-                                    $image = $path ."/portrait_incredible.". $extension;
+                                    $image = $path .$imageSizeUrl. $extension;
                                     $name = $characters->name;
                                     $id = $characters->id;
                             ?>
@@ -112,7 +112,7 @@ if (empty($id)) {
                 foreach ($dados->data->results as $creators) {
                     $path = $creators->thumbnail->path;
                     $extension = $creators->thumbnail->extension;
-                    $image = $path ."/portrait_incredible.". $extension;
+                    $image = $path .$imageSizeUrl. $extension;
                     $id = $creators->id;
                     $fullName = $creators->fullName;
             ?>
