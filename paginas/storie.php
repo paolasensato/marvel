@@ -102,7 +102,7 @@
                 <h2 class="text-center">Comics</h2>
                 <div class="row">
                     <?php
-                        foreach ($dados->data->results as $comics) {
+                        foreach ($comics as $comics) {
                             if ($comics->thumbnail == null){
                                 $image = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_uncanny.jpg";
                             } else {
@@ -142,7 +142,7 @@
                 <h2 class="text-center">Series</h2>
                 <div class="row">
                     <?php
-                    foreach ($dados->data->results as $series) {
+                    foreach ($series as $series) {
                         if ($series->thumbnail == null){
                             $image = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_uncanny.jpg";
                         } else {
@@ -182,7 +182,7 @@
                 <h2 class="text-center">Events</h2>
                 <div class="row">
                     <?php
-                        foreach ($dados->data->results as $events) {
+                        foreach ($events as $events) {
                             if ($events->thumbnail == null){
                                 $image = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_uncanny.jpg";
                             } else {
