@@ -14,7 +14,7 @@
         $description = $comic->description;
         $path = $comic->thumbnail->path;
         $extension = $comic->thumbnail->extension;
-        $image = $path . "/portrait_uncanny." . $extension;
+        $image = $path .$imageSizeUrl. $extension;
 ?>
     <h1 class="text-center my-5">Event</h1>
     <div class="card">
@@ -57,21 +57,23 @@
                 foreach ($dados->data->results as $characters) {
                     $path = $characters->thumbnail->path;
                     $extension = $characters->thumbnail->extension;
-                    $image = $path . "." . $extension;
+                    $image = $path .$imageSizeUrl. $extension;
                     $id = $characters->id;
                     $name = $characters->name;
             ?>
                     <div class="col-12 col-md-3">
-                        <div class="card text-center">
-                            <img src="<?= $image?>" alt="<?= $name?>">
-                            <p class="titulo">
-                                <strong>
-                                    <?=$name?>
-                                </strong>
-                                <p>
-                                    <a href="character/<?=$id?>" class="btn btn-warning"> See More</a>
+                        <div class="card">
+                            <img src="<?= $image ?>" alt="<?= $name ?>">
+                            <div class="card-body text-center">
+                                <p class="titulo">
+                                    <strong>
+                                        <?= $name ?>
+                                    </strong>
                                 </p>
-                            </p>
+                                <p>
+                                    <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
             <?php
@@ -94,17 +96,23 @@
             foreach ($dados->data->results as $creators) {
                 $path = $creators->thumbnail->path;
                 $extension = $creators->thumbnail->extension;
-                $image = $path . "." . $extension;
+                $image = $path .$imageSizeUrl. $extension;
                 $id = $creators->id;
                 $fullName = $creators->fullName;
         ?>
                 <div class="col-12 col-md-3">
-                    <div class="card text-center">
-                        <img src="<?= $image?>" alt="<?= $fullName?>">
-                        <p class="titulo">
-                            <strong><?=$fullName?></strong>
-                            <p><a href="creator/<?=$id?>" class="btn btn-warning"> See More</a></p>
-                        </p>
+                    <div class="card">
+                        <img src="<?= $image ?>" alt="<?= $fullName ?>">
+                        <div class="card-body text-center">
+                            <p class="titulo">
+                                <strong>
+                                    <?= $fullName ?>
+                                </strong>
+                            </p>
+                            <p>
+                                <a href="creator/<?= $id ?>" class="btn btn-warning"> See more</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
         <?php
@@ -126,7 +134,7 @@
             foreach ($dados->data->results as $comics) {
                 $path = $comics->thumbnail->path;
                 $extension = $comics->thumbnail->extension;
-                $image = $path .".". $extension;
+                $image = $path .$imageSizeUrl. $extension;
                 $title = $comics->title;
                 $id = $comics->id;
         ?>
@@ -134,9 +142,13 @@
                     <div class="card">
                         <img src="<?= $image ?>" alt="<?= $title ?>">
                         <div class="card-body text-center">
-                            <p class="titulo"><strong><?= $title?></strong></p>
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
                             <p>
-                                <a href="comic/<?= $id?>" class="btn btn-warning">See more</a>
+                                <a href="comic/<?= $id ?>" class="btn btn-warning">See more</a>
                             </p>
                         </div>
                     </div>
@@ -162,13 +174,17 @@
                 $title = $series->title;
                 $path = $series->thumbnail->path;
                 $extension = $series->thumbnail->extension;
-                $image = $path . "." . $extension;
+                $image = $path .$imageSizeUrl. $extension;
         ?>
                 <div class="col-12 col-md-3">
                     <div class="card">
+                        <img src="<?= $image ?>" alt="<?= $title ?>">
                         <div class="card-body text-center">
-                            <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
-                            <p class="card-title"><?= $title ?></p>
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
                             <p>
                                 <a href="serie/<?= $id ?>" class="btn btn-warning">See more</a>
                             </p>
@@ -196,13 +212,17 @@
                 $title = $stories->title;
                 $path = $stories->thumbnail->path ?? null;
                 $extension = $stories->thumbnail->extension ?? null;
-                $image = $path . "." . $extension;
+                $image = $path .$imageSizeUrl. $extension;
         ?>
                 <div class="col-12 col-md-3">
                     <div class="card">
+                        <img src="<?= $image ?>" alt="<?= $title ?>">
                         <div class="card-body text-center">
-                            <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
-                            <p class="card-title"><?= $title ?></p>
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
                             <p>
                                 <a href="storie/<?= $id ?>" class="btn btn-warning">See more</a>
                             </p>

@@ -16,7 +16,7 @@ if (empty($id)) {
 
     $path = $character->thumbnail->path;
     $extension = $character->thumbnail->extension;
-    $image = $path . "/portrait_uncanny." . $extension;
+    $image = $path . $imageSizeUrl . $extension;
     $name = $character->name;
     $description = $character->description;
 
@@ -45,13 +45,17 @@ if (empty($id)) {
             $title = $comics->title;
             $path = $comics->thumbnail->path;
             $extension = $comics->thumbnail->extension;
-            $image = $path . "." . $extension;
+            $image = $path .$imageSizeUrl. $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
-                        <p class="card-title"><?= $title ?></p>
+                        <p class="titulo">
+                            <strong>
+                                <?= $title ?>
+                            </strong>
+                        </p>
                         <p>
                             <a href="comic/<?= $id ?>" class="btn btn-warning">See more</a>
                         </p>
@@ -75,13 +79,17 @@ if (empty($id)) {
             $title = $series->title;
             $path = $series->thumbnail->path;
             $extension = $series->thumbnail->extension;
-            $image = $path . "." . $extension;
+            $image = $path .$imageSizeUrl. $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
-                        <p class="card-title"><?= $title ?></p>
+                        <p class="titulo">
+                            <strong>
+                                <?= $title ?>
+                            </strong>
+                        </p>
                         <p>
                             <a href="serie/<?= $id ?>" class="btn btn-warning">See more</a>
                         </p>
@@ -105,13 +113,17 @@ if (empty($id)) {
             $title = $stories->title;
             $path = $stories->thumbnail->path ?? null;
             $extension = $stories->thumbnail->extension ?? null;
-            $image = $path . "." . $extension;
+            $image = $path .$imageSizeUrl. $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
-                        <p class="card-title"><?= $title ?></p>
+                        <p class="titulo">
+                            <strong>
+                                <?= $title ?>
+                            </strong>
+                        </p>
                         <p>
                             <a href="storie/<?= $id ?>" class="btn btn-warning">See more</a>
                         </p>
@@ -135,13 +147,17 @@ if (empty($id)) {
             $title = $events->title;
             $path = $events->thumbnail->path;
             $extension = $events->thumbnail->extension;
-            $image = $path . "." . $extension;
+            $image = $path .$imageSizeUrl. $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
-                    <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top">
-                        <p class="card-title"><?= $title ?></p>
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
+                    <div class="text-center">
+                        <p class="titulo">
+                            <strong>
+                                <?= $title ?>
+                            </strong>
+                        </p>
                         <p>
                             <a href="event/<?= $id ?>" class="btn btn-warning">See more</a>
                         </p>

@@ -18,7 +18,7 @@ if (empty($id)) {
     $description = $comic->description;
     $path = $comic->thumbnail->path;
     $extension = $comic->thumbnail->extension;
-    $image = $path . "/portrait_uncanny." . $extension;
+    $image = $path . $imageSizeUrl . $extension;
 ?>
     <h1 class="text-center my-5">Comic</h1>
     <div class="card">
@@ -64,21 +64,23 @@ if (empty($id)) {
                                 foreach ($dados->data->results as $characters) {
                                     $path = $characters->thumbnail->path;
                                     $extension = $characters->thumbnail->extension;
-                                    $image = $path . "/portrait_uncanny." . $extension;
+                                    $image = $path .$imageSizeUrl. $extension;
                                     $name = $characters->name;
                                     $id = $characters->id;
                             ?>
                                 <div class="col-12 col-md-3 px-1">
-                                    <div class="card card-body h-100 text-center">
-                                        <img class="img-fluid w-100 h-75" src="<?= $image ?>" alt="<?= $name ?>">
-                                        <p class="titulo">
-                                            <strong>
-                                                <?= $name ?>
-                                            </strong>
-                                        </p>
-                                        <p>
-                                            <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
-                                        </p>
+                                    <div class="card h-100">
+                                        <img class="img-fluid" src="<?= $image ?>" alt="<?= $name ?>">
+                                        <div class="card-body text-center">
+                                            <p class="titulo">
+                                                <strong>
+                                                    <?= $name ?>
+                                                </strong>
+                                            </p>
+                                            <p>
+                                                <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             <?php
@@ -110,21 +112,23 @@ if (empty($id)) {
                 foreach ($dados->data->results as $creators) {
                     $path = $creators->thumbnail->path;
                     $extension = $creators->thumbnail->extension;
-                    $image = $path . "/portrait_uncanny." . $extension;
+                    $image = $path .$imageSizeUrl. $extension;
                     $id = $creators->id;
                     $fullName = $creators->fullName;
             ?>
                     <div class="col-12 col-md-3">
-                        <div class="card text-center">
-                            <img src="<?= $image?>" alt="<?= $fullName?>" class="w-100">
-                            <p class="titulo">
-                                <strong>
-                                    <?=$fullName?>
-                                </strong>
-                                <p>
-                                    <a href="creators/<?=$id?>" class="btn btn-warning"> See More</a>
+                        <div class="card h-100">
+                            <img src="<?= $image ?>" alt="<?=  $fullName ?>">
+                            <div class="card-body text-center">
+                                <p class="titulo">
+                                    <strong>
+                                        <?= $fullName ?>
+                                    </strong>
                                 </p>
-                            </p>
+                                <p>
+                                    <a href="creators/<?= $id ?>" class="btn btn-warning"> See more</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
             <?php

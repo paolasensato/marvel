@@ -7,14 +7,18 @@
     border-radius: 0;
 }
 .card .titulo {
-    height: 5 rem;
+    height: 5rem;
 }
 .carousel-inner {
     width: auto;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
 }
 
 .carousel-inner::-webkit-scrollbar {
     display: none;
+}
+.carousel-inner .img-fluid {
+    width: 100%;
+    height: auto;
 }

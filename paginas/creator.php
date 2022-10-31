@@ -16,7 +16,7 @@ if (empty($id)) {
 
     $path = $creator->thumbnail->path;
     $extension = $creator->thumbnail->extension;
-    $image = $path . "/portrait_uncanny." . $extension;
+    $image = $path .$imageSizeUrl. $extension;
     $name = $creator->fullName;
 
 ?>
@@ -45,13 +45,17 @@ if (empty($id)) {
             $title = $comics->title;
             $path = $comics->thumbnail->path;
             $extension = $comics->thumbnail->extension;
-            $image = $path . "." . $extension;
+            $image = $path . $imageSizeUrl . $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top w-100 h-75">
-                        <p class="card-title"><?= $title ?></p>
+                        <p class="titulo">
+                            <strong>
+                                <?= $title ?>
+                            </strong>
+                        </p>
                         <p>
                             <a href="comic/<?= $id ?>" class="btn btn-warning">See more</a>
                         </p>
@@ -79,13 +83,17 @@ if (empty($id)) {
                 $title = $series->title;
                 $path = $series->thumbnail->path;
                 $extension = $series->thumbnail->extension;
-                $image = $path . "." . $extension;
+                $image = $path .$imageSizeUrl. $extension;
             ?>
                 <div class="col-12 col-md-3">
                     <div class="card">
+                        <img src="<?= $image ?>" alt="<?= $title ?>">
                         <div class="card-body text-center">
-                            <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top w-100 h-75">
-                            <p class="card-title"><?= $title ?></p>
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
                             <p>
                                 <a href="serie/<?= $id ?>" class="btn btn-warning">See more</a>
                             </p>
@@ -108,27 +116,31 @@ if (empty($id)) {
         <h2 class="text-center">Stories</h2>
         <div class="row text-center">
         <?php
-        foreach ($dados->data->results as $stories) {
-            $id = $stories->id;
-            $title = $stories->title;
-            $path = $stories->thumbnail->path ?? null;
-            $extension = $stories->thumbnail->extension ?? null;
-            $image = $path . "." . $extension;
+            foreach ($dados->data->results as $stories) {
+                $id = $stories->id;
+                $title = $stories->title;
+                $path = $stories->thumbnail->path ?? null;
+                $extension = $stories->thumbnail->extension ?? null;
+                $image = $path .$imageSizeUrl. $extension;
         ?>
-            <div class="col-12 col-md-3">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top w-100 h-75">
-                        <p class="card-title"><?= $title ?></p>
-                        <p>
-                            <a href="storie/<?= $id ?>" class="btn btn-warning">See more</a>
-                        </p>
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="<?= $image ?>" alt="<?= $title ?>">
+                        <div class="card-body text-center">
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
+                            <p>
+                                <a href="storie/<?= $id ?>" class="btn btn-warning">See more</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php
-        }
-        ?>
+            <?php
+            }
+            ?>
         </div>
         <?php
     }
@@ -147,13 +159,17 @@ if (empty($id)) {
             $title = $events->title;
             $path = $events->thumbnail->path;
             $extension = $events->thumbnail->extension;
-            $image = $path . "." . $extension;
+            $image = $path .$imageSizeUrl. $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
+                    <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img-top w-100 h-75">
-                        <p class="card-title"><?= $title ?></p>
+                        <p class="titulo">
+                            <strong>
+                                <?= $title ?>
+                            </strong>
+                        </p>
                         <p>
                             <a href="event/<?= $id ?>" class="btn btn-warning">See more</a>
                         </p>

@@ -10,14 +10,20 @@
             $title = $series->title;
             $path = $series->thumbnail->path;
             $extension = $series->thumbnail->extension;
-            $image = $path . '.' . $extension;
+            $image = $path .$imageSizeUrl. $extension;
             ?>
                 <div class="col-12 col-md-3">
                     <div class="card">
                         <img src="<?= $image?>" alt="<?= $title ?>">
                         <div class="card-body text-center">
-                            <p class="card-title"> <?=$title?></p>
-                            <p><a href="serie/<?=$id?>" class="btn btn-warning">See more</a></p>
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
+                            <p>
+                                <a href="serie/<?= $id ?>" class="btn btn-warning">See more</a>
+                            </p>
                         </div>
                     </div>
                 </div>
