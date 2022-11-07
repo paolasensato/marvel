@@ -45,7 +45,6 @@ if (empty($id)) {
                     ?>
                 </p>
             </div>
-
         </div>
     </div>
 

@@ -7,12 +7,12 @@
         $dados = file_get_contents($arquivo);
         $dados = json_decode($dados);
 
-        foreach ($dados->data->results as $comics) {
-            $path = $comics->thumbnail->path;
-            $extension = $comics->thumbnail->extension;
+        foreach ($dados->data->results as $events) {
+            $path = $events->thumbnail->path;
+            $extension = $events->thumbnail->extension;
             $image = $path .$imageSizeUrl. $extension;
-            $title = $comics->title;
-            $id = $comics->id;
+            $title = $events->title;
+            $id = $events->id;
     ?>
     <div class="col-12 col-md-3">
         <div class="card">
