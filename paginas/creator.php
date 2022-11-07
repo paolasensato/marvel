@@ -62,13 +62,13 @@ if (empty($id)) {
                     </div>
                 </div>
             </div>
-            <?php
+        <?php
         }
         ?>
         </div>
         <?php
     }
-        
+
     $arquivo = "{$url}/creators/{$id}/series?{$apiKey}";
     $dados = file_get_contents($arquivo);
     $dados = json_decode($dados);
@@ -100,9 +100,9 @@ if (empty($id)) {
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
-        ?>
+            ?>
         </div>
         <?php
     }
