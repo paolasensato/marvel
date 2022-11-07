@@ -62,7 +62,7 @@ if (empty($id)) {
                     </div>
                 </div>
             </div>
-            <?php
+        <?php
         }
         ?>
         </div>

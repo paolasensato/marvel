@@ -13,7 +13,4 @@
     $apiKey = "ts={$time}&apikey={$plublickey}&hash={$hash}";
 
     $imageSizeUrl = "/portrait_incredible.";
-
-    echo $url;
-
 ?>

@@ -28,18 +28,35 @@ if (empty($id)) {
             </div>
             <div class="col-12 col-md-9">
                 <h1 class="text-center"><?= $name ?></h1>
-                <p><?= $description ?></p>
+                    <?php 
+                        if(empty($description)) {
+                            ?>
+                                <p>
+                                    Description not available. For more information 
+                                    <a href="https://www.marvel.com/" target="blank">click here</a>
+                                </p>
+                            <?php
+                        } else {
+                            ?>
+                                <p><?= $description ?></p>
+                            <?php
+                        }
+                    ?>
+                </p>
             </div>
         </div>
     </div>
 
-    <h2 class="text-center">Comics</h2>
-    <div class="row">
-        <?php
-        $arquivo = "{$url}/characters/{$id}/comics?{$apiKey}";
-        $dados = file_get_contents($arquivo);
-        $dados = json_decode($dados);
+<?php
+    $arquivo = "{$url}/characters/{$id}/comics?{$apiKey}";
+    $dados = file_get_contents($arquivo);
+    $dados = json_decode($dados);
 
+    if(!empty($dados->data->results)) {
+    ?>
+        <h2 class="text-center">Comics</h2>
+        <div class="row text-center">
+        <?php
         foreach ($dados->data->results as $comics) {
             $id = $comics->id;
             $title = $comics->title;
@@ -65,21 +82,101 @@ if (empty($id)) {
         <?php
         }
         ?>
-    </div>
-
-    <h2 class="text-center">Events</h2>
-    <div class="row">
+        </div>
         <?php
-        $arquivo = "{$url}/characters/{$id}/events?{$apiKey}";
-        $dados = file_get_contents($arquivo);
-        $dados = json_decode($dados);
+    }
 
-        foreach ($dados->data->results as $events) {
-            $id = $events->id;
-            $title = $events->title;
-            $path = $events->thumbnail->path;
-            $extension = $events->thumbnail->extension;
-            $image = $path .$imageSizeUrl. $extension;
+    $arquivo = "{$url}/characters/{$id}/series?{$apiKey}";
+    $dados = file_get_contents($arquivo);
+    $dados = json_decode($dados);
+
+    if(!empty($dados->data->results)) {
+        ?>
+        <h2 class="text-center">Series</h2>
+        <div class="row text-center">
+        <?php
+            foreach ($dados->data->results as $series) {
+                $id = $series->id;
+                $title = $series->title;
+                $path = $series->thumbnail->path;
+                $extension = $series->thumbnail->extension;
+                $image = $path .$imageSizeUrl. $extension;
+        ?>
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="<?= $image ?>" alt="<?= $title ?>">
+                        <div class="card-body text-center">
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
+                            <p>
+                                <a href="serie/<?= $id ?>" class="btn btn-warning">See more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+        <?php
+    }
+
+    $arquivo = "{$url}/characters/{$id}/stories?{$apiKey}";
+    $dados = file_get_contents($arquivo);
+    $dados = json_decode($dados);
+
+    if (!empty($dados->data->results)){
+        ?>
+        <h2 class="text-center">Stories</h2>
+        <div class="row">
+        <?php
+            foreach ($dados->data->results as $stories) {
+                $id = $stories->id;
+                $title = $stories->title;
+                $path = $stories->thumbnail->path ?? null;
+                $extension = $stories->thumbnail->extension ?? null;
+                $image = $path .$imageSizeUrl. $extension;
+        ?>
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="<?= $image ?>" alt="<?= $title ?>">
+                        <div class="card-body text-center">
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
+                            <p>
+                                <a href="storie/<?= $id ?>" class="btn btn-warning">See more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+        <?php
+    }
+    
+    $arquivo = "{$url}/characters/{$id}/events?{$apiKey}";
+    $dados = file_get_contents($arquivo);
+    $dados = json_decode($dados);
+
+    if (!empty($dados->data->results)) {
+        ?>
+        <h2 class="text-center">Events</h2>
+        <div class="row text-center">
+        <?php
+            foreach ($dados->data->results as $events) {
+                $id = $events->id;
+                $title = $events->title;
+                $path = $events->thumbnail->path;
+                $extension = $events->thumbnail->extension;
+                $image = $path .$imageSizeUrl. $extension;
         ?>
             <div class="col-12 col-md-3">
                 <div class="card">
@@ -99,9 +196,8 @@ if (empty($id)) {
         <?php
         }
         ?>
-    </div>
-
-<?php
-
+        </div>
+        <?php
+    }
 }
 ?>
