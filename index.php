@@ -53,7 +53,7 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main>
         <?php
         $pagina = "home";
 
