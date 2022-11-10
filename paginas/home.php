@@ -1,4 +1,4 @@
-<div class="banner-home">
+<div class="banner banner-home">
     <div class="w-100">
         <p id="titulo-principal"><strong>MARVEL</strong></p>
     </div>

@@ -15,12 +15,32 @@
     color: white;
 }
 
-.banner-home{
+.banner{
     padding-top: 0;
-    background-image: url(../images/banner-home.jpg);
     background-size: cover;
     width: 100%;
     height: 700px;
+    margin-bottom: 50px;
+}
+
+.banner-home{
+    background-image: url(../images/banner-home.jpg);
+}
+
+.banner-comics{
+    background-image: url(../images/banner-comics.jpg);
+}
+
+.banner-events{
+    background-image: url(../images/banner-events.jpg);
+}
+
+.banner-characters{
+    background-image: url(../images/banner-characters.jpg);
+}
+
+.banner-creators{
+    background-image: url(../images/banner-creators.jpg);
 }
 
 #titulo-principal {

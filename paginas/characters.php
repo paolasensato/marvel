@@ -1,3 +1,9 @@
+<div class="banner banner-characters">
+    <div class="w-100">
+        <p id="titulo-principal"><strong>CHARACTERS</strong></p>
+    </div>
+</div>
+
 <div class="container">
     <h1 class="text-center">
         Characters

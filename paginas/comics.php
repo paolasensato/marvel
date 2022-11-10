@@ -1,7 +1,10 @@
+<div class="banner banner-comics">
+    <div class="w-100">
+        <p id="titulo-principal"><strong>COMICS</strong></p>
+    </div>
+</div>
+
 <div class="container">
-    <h1 class="text-center">
-        Comics
-    </h1>
     <div class="row">
         <?php
         $arquivo = "{$url}/comics?{$apiKey}";

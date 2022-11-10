@@ -1,3 +1,9 @@
+<div class="banner banner-events">
+    <div class="w-100">
+        <p id="titulo-principal"><strong>EVENTS</strong></p>
+    </div>
+</div>
+
 <div class="container">
     <h1 class="text-center">
         Events
