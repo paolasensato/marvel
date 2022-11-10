@@ -1,14 +1,18 @@
 .navbar {
     background-color: rgba(0, 0, 0, 0.558) !important;
     width: 100%;
-    z-index: 10; /*não deixa que o scale produto fique sobrepondo o header*/
+    z-index: 10; /*não deixa que o scale dos cards fique sobrepondo o header*/
     position: fixed;
     padding: 10px;
     top: 0;
 }
 
-.navbar-nav {
-    flex-grow: inherit;
+.navbar-icon {
+    width: auto;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
 }
 
 .navbar a {
