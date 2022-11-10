@@ -1,24 +1,51 @@
-const sliders = document.querySelector(".carousel-inner");
-let scrollAmount = 0;
-let scrollPerClick = 400;
+const sliderComics = document.querySelector("#carousel-comics");
+const sliderEvents = document.querySelector("#carousel-events");
 
-function sliderScrollLeft() {
-	sliders.scrollTo({
+const cardPadding = 8;
+const scrollPerClickComics = (cardPadding + document.querySelector("#img-comics").clientWidth);
+const scrollPerClickEvents = (cardPadding + document.querySelector("#img-events").clientWidth);
+
+let scrollAmountComics = 0;
+let scrollAmountEvents = 0;
+
+
+function scrollLeftComics() {
+	sliderComics.scrollTo({
 		top: 0,
-		left: (scrollAmount -= scrollPerClick),
+		left: (scrollAmountComics -= scrollPerClickComics),
 		behavior: "smooth",
 	});
 
-	if (scrollAmount < 0) scrollAmount = 0;
+	if (scrollAmountComics < 0) scrollAmountComics = 0;
 }
 
-function sliderScrollRight() {
-	if (scrollAmount <= sliders.scrollWidth - sliders.clientWidth) {
-		sliders.scrollTo({
+function scrollRightComics() {
+	if (scrollAmountComics <= sliderComics.scrollWidth - sliderComics.clientWidth) {
+		sliderComics.scrollTo({
 			top: 0,
-			left: (scrollAmount += scrollPerClick),
+			left: (scrollAmountComics += scrollPerClickComics),
 			behavior: "smooth",
 		});
 	}
-  
+}
+
+
+function scrollLeftEvents() {
+	sliderEvents.scrollTo({
+		top: 0,
+		left: (scrollAmountEvents -= scrollPerClickEvents),
+		behavior: "smooth",
+	});
+
+	if (scrollAmountEvents < 0) scrollAmountEvents = 0;
+}
+
+function scrollRightEvents() {
+	if (scrollAmountEvents <= sliderEvents.scrollWidth - sliderEvents.clientWidth) {
+		sliderEvents.scrollTo({
+			top: 0,
+			left: (scrollAmountEvents += scrollPerClickEvents),
+			behavior: "smooth",
+		});
+	}
 }

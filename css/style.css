@@ -26,31 +26,56 @@
 #titulo-principal {
     text-align: center;
     color: #FFFFFF;
+    margin: 0;
     padding-top: 350px;
     font-size: 15rem;
+    text-shadow: 0 0 0.5rem #505050;
 }
 
 .card {
     border-radius: 0;
     margin-bottom: 1.5rem;
+}
+.img-carousel {
     box-shadow: 0 0 0.5rem #CCC;
 }
 .btn {
     border-radius: 0;
 }
+.card-body {
+    padding: 0.5rem;
+}
 .card .titulo {
-    height: 5rem;
+    height: 2rem;
+    text-align: center;
+}
+.titulo a {
+    text-decoration: none;
+    color: black;
+    font-size: small;
 }
 .carousel-inner {
     width: auto;
     height: 500px;
     overflow: hidden;
 }
-
 .carousel-inner::-webkit-scrollbar {
     display: none;
 }
 .carousel-inner .img-fluid {
     width: 100%;
     height: auto;
+}
+@media screen and (max-width: 830px) {
+    #titulo-principal {
+        padding-top: 250px ;
+        font-size: 5rem;
+    }
+    .banner-home {
+        max-width: 100%;
+        height: 400px;
+    }
+    .carousel-inner {
+        height: 550px;
+    }
 }
