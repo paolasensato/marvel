@@ -19,7 +19,7 @@
             $id = $comics->id;
 
         ?>
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-2">
                 <div class="card">
                     <img src="<?= $image ?>" alt="<?= $title ?>">
                     <div class="card-body text-center">
