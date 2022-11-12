@@ -26,6 +26,10 @@
     color: #CF1928;
 }
 
+.head-font {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .banner{
     padding-top: 0;
     background-size: cover;
@@ -55,13 +59,12 @@
 }
 
 #titulo-principal {
-    font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     color: #FFFFFF;
     margin: 0;
     padding-top: 350px;
     font-size: 11rem;
-    text-shadow: 0 0 0.5rem #505050;
+    text-shadow: 0 0 0.5rem #4F4F4F;
 }
 
 .box-principal {
@@ -69,6 +72,7 @@
     margin-bottom: 5rem;
     text-align: center;
     background-color: #000000;
+    font-family: 'Marvel', sans-serif;
     color: #FFFFFF;
     border: 1px solid #CCC;
     padding: 0;
@@ -95,6 +99,7 @@
 .titulo a {
     text-decoration: none;
     color: black;
+    font-family: 'Marvel', sans-serif;
     font-size: small;
 }
 .carousel-inner {

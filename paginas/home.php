@@ -1,11 +1,11 @@
 <div class="banner banner-home">
     <div class="w-100">
-        <p id="titulo-principal"><strong>MARVEL</strong></p>
+        <p id="titulo-principal" class="head-font"><strong>MARVEL</strong></p>
     </div>
 </div>
 
 <div class="container px-0">
-    <h2 class="text-center mt-5">Comics</h2>
+    <h2 class="text-center head-font mt-5">Comics</h2>
     <div class="container text-center my-3">
         <div id="carouselControls" class="carousel" data-bs-ride="carousel">
             <div class="carousel-inner d-flex d-inline-block" id="carousel-comics">
@@ -47,7 +47,7 @@
             </button>
         </div>
     </div>
-    <h2 class="text-center mt-5">Events</h2>
+    <h2 class="text-center head-font mt-5">Events</h2>
     <div class="container text-center my-3">
         <div id="carouselControls" class="carousel" data-bs-ride="carousel">
             <div class="carousel-inner d-flex d-inline-block" id="carousel-events">

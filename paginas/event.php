@@ -24,7 +24,7 @@
                         <img src="<?= $image ?>" alt="<?= $title ?>" class="w-100">
                     </div>
                     <div class="col-12 col-md-9">
-                        <h1 class="text-center py-3"><?= $title ?></h1>
+                        <h3 class="text-center head-font py-3"><?= $title ?></h3>
                         <p>
                             <?php 
                                 if(empty($description)) {
@@ -52,7 +52,7 @@
             
             if (!empty($dados->data->results)) {
                 ?>
-                <h2 class="text-center">Characters</h2>
+                <h2 class="text-center head-font py-5">Characters</h2>
                 <div class="row">
                     <?php
                     foreach ($dados->data->results as $characters) {
@@ -91,7 +91,7 @@
             
             if (!empty($dados->data->results)) {
                 ?>
-            <h2 class="text-center">Creators</h2>
+            <h2 class="text-center head-font py-5">Creators</h2>
             <div class="row">
                 <?php
                 foreach ($dados->data->results as $creators) {
@@ -129,7 +129,7 @@
         
         if (!empty($dados->data->results)) {
             ?>        
-            <h2 class="text-center">Comics</h2>
+            <h2 class="text-center head-font py-5">Comics</h2>
             <div class="row">
                 <?php
                 foreach ($dados->data->results as $comics) {

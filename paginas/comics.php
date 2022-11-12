@@ -1,6 +1,6 @@
 <div class="banner banner-comics">
     <div class="w-100">
-        <p id="titulo-principal"><strong>COMICS</strong></p>
+        <p id="titulo-principal" class="head-font"><strong>COMICS</strong></p>
     </div>
 </div>
 

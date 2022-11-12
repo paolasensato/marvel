@@ -1,4 +1,4 @@
-<h1 class="text-center">
+<h1 class="text-center head-font">
     Erro 404
 </h1>
 <p class="text-center">

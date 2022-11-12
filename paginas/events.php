@@ -1,13 +1,10 @@
 <div class="banner banner-events">
     <div class="w-100">
-        <p id="titulo-principal"><strong>EVENTS</strong></p>
+        <p id="titulo-principal" class="head-font"><strong>EVENTS</strong></p>
     </div>
 </div>
 
 <div class="container">
-    <h1 class="text-center">
-        Events
-    </h1>
     <div class="row">
             <?php
             $arquivo = "{$url}/events?{$apiKey}";
