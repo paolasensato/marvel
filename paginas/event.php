@@ -17,33 +17,33 @@
             $extension = $comic->thumbnail->extension;
             $image = $path .$imageSizeUrl. $extension;
             ?>
-        <h1 class="text-center my-5">Event</h1>
-        <div class="card">
-            <div class="row">
-                <div class="col-12 col-md-3">
-                    <img src="<?= $image ?>" alt="<?= $title ?>" class="w-100">
-                </div>
-                <div class="col-12 col-md-9">
-                    <h1 class="titulo text-center"><?= $title ?></h1>
-                    <p>
-                        <?php 
-                            if(empty($description)) {
+
+            <div class="container box-principal">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <img src="<?= $image ?>" alt="<?= $title ?>" class="w-100">
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <h1 class="text-center py-3"><?= $title ?></h1>
+                        <p>
+                            <?php 
+                                if(empty($description)) {
+                                    ?>
+                                        <p>
+                                            Description not available. For more information 
+                                            <a href="https://www.marvel.com/" target="blank">click here</a>
+                                        </p>
+                                        <?php
+                                } else {
+                                    ?>
+                                        <p><?= $description ?></p>
+                                        <?php
+                                }
                                 ?>
-                                    <p>
-                                        Description not available. For more information 
-                                        <a href="https://www.marvel.com/" target="blank">click here</a>
-                                    </p>
-                                    <?php
-                            } else {
-                                ?>
-                                    <p><?= $description ?></p>
-                                    <?php
-                            }
-                            ?>
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
         
         <?php
             $arquivo = "{$url}/events/{$id}/characters?{$apiKey}";

@@ -22,12 +22,12 @@
     $description = $character->description;
 
 ?>
-    <div class="card">
+    <div class="container box-principal">
         <div class="row">
             <div class="col-12 col-md-3">
-                <img src="<?= $image ?>" alt="<?= $name ?>">
+                <img src="<?= $image ?>" alt="<?= $name ?>" class="w-100">
             </div>
-            <div class="col-12 col-md-9 p-3 card-principal">
+            <div class="col-12 col-md-9 p-4">
                 <h1 class="text-center py-3"><?= $name ?></h1>
                     <?php 
                         if(empty($description)) {

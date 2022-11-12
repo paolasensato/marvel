@@ -55,12 +55,24 @@
 }
 
 #titulo-principal {
+    font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     color: #FFFFFF;
     margin: 0;
     padding-top: 350px;
-    font-size: 15rem;
+    font-size: 11rem;
     text-shadow: 0 0 0.5rem #505050;
+}
+
+.box-principal {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid #CCC;
+    padding: 0;
+    border-radius: 20px 0 20px 0;
 }
 
 .card {
@@ -100,7 +112,7 @@
 @media screen and (max-width: 830px) {
     #titulo-principal {
         padding-top: 250px ;
-        font-size: 5rem;
+        font-size: 4rem;
     }
     .banner-home {
         max-width: 100%;

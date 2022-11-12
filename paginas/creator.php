@@ -21,15 +21,31 @@
             $name = $creator->fullName;
             
             ?>
-            <h1 class="mb-3 text-center">Creator</h1>
-            <div class="d-flex justify-content-center">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <img src="<?= $image ?>" alt="<?= $name ?>">
-                        <h1><?= $name ?></h1>
+                <div class="container box-principal">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <img src="<?= $image ?>" alt="<?= $name ?>" class="w-100">
+                        </div>
+                        <div class="col-12 col-md-9 p-4">
+                            <h1 class="text-center py-3"><?= $name ?></h1>
+                                <?php 
+                                    if(empty($description)) {
+                                        ?>
+                                            <p>
+                                                Description not available. For more information 
+                                                <a href="https://www.marvel.com/" target="blank">click here</a>
+                                            </p>
+                                        <?php
+                                    } else {
+                                        ?>
+                                            <p><?= $description ?></p>
+                                        <?php
+                                    }
+                                ?>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
             
             <?php
                 $arquivo = "{$url}/creators/{$id}/comics?{$apiKey}";

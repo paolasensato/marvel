@@ -6,10 +6,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvel</title>
     <base href="http://localhost/marvel/">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/icons8-vingadores-144.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">

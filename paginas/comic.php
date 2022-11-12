@@ -21,14 +21,14 @@
             $extension = $comic->thumbnail->extension;
             $image = $path . $imageSizeUrl . $extension;
             ?>
-        <h1 class="text-center my-5">Comic</h1>
-        <div class="card">
+        
+        <div class="container box-principal">
             <div class="row">
                 <div class="col-12 col-md-3">
                     <img src="<?= $image ?>" alt="<?= $title ?>" class="w-100">
                 </div>
                 <div class="col-12 col-md-9">
-                    <h3 class="titulo text-center"><?= $title ?></h3>
+                    <h3 class="text-center py-3"><?= $title ?></h3>
                     <p>
                         <?php 
                             if(empty($description)) {
