@@ -4,11 +4,7 @@
         $id = $param[1] ?? null;
         
         if (empty($id)) {
-            ?>
-            <p class="alert alert-danger text-center">
-                Oops! Invalid creator!
-            </p>
-            <?php
+            include 'erro.php';
         } else {
             $arquivo = "{$url}/creators/{$id}?{$apiKey}";
             $dados = file_get_contents($arquivo);
@@ -70,7 +66,7 @@
                             <div class="col-12 col-md-2">
                                 <a href="comic/<?= $id ?>">
                                     <div class="card">
-                                        <img src="<?= $image ?>" alt="<?= $title ?>">
+                                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img w-100">
                                         <div class="card-body text-center">
                                             <p class="titulo">
                                                 <strong>
@@ -107,7 +103,7 @@
                                 <div class="col-12 col-md-2">
                                     <a href="event/<?= $id ?>">
                                         <div class="card">
-                                            <img src="<?= $image ?>" alt="<?= $title ?>">
+                                            <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img w-100">
                                             <div class="card-body text-center">
                                                 <p class="titulo">
                                                     <strong>
