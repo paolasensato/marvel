@@ -62,20 +62,19 @@
                         $id = $characters->id;
                         $name = $characters->name;
                         ?>
-                        <div class="col-12 col-md-3">
-                            <div class="card">
-                                <img src="<?= $image ?>" alt="<?= $name ?>">
-                                <div class="card-body text-center">
-                                    <p class="titulo">
-                                        <strong>
-                                            <?= $name ?>
-                                        </strong>
-                                    </p>
-                                    <p>
-                                        <a href="character/<?= $id ?>" class="btn btn-warning"> See more</a>
-                                    </p>
+                        <div class="col-12 col-md-2">
+                            <a href="character/<?= $id ?>">
+                                <div class="card">
+                                    <img src="<?= $image ?>" alt="<?= $name ?>">
+                                    <div class="card-body text-center">
+                                        <p class="titulo">
+                                            <strong>
+                                                <?= $name ?>
+                                            </strong>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                 <?php
                     }
@@ -101,20 +100,19 @@
                     $id = $creators->id;
                     $fullName = $creators->fullName;
                     ?>
-                    <div class="col-12 col-md-3">
-                        <div class="card">
-                            <img src="<?= $image ?>" alt="<?= $fullName ?>">
-                            <div class="card-body text-center">
-                                <p class="titulo">
-                                    <strong>
-                                        <?= $fullName ?>
-                                    </strong>
-                                </p>
-                                <p>
-                                    <a href="creator/<?= $id ?>" class="btn btn-warning"> See more</a>
-                                </p>
+                    <div class="col-12 col-md-2">
+                        <a href="creator/<?= $id ?>">
+                            <div class="card">
+                                <img src="<?= $image ?>" alt="<?= $fullName ?>">
+                                <div class="card-body text-center">
+                                    <p class="titulo">
+                                        <strong>
+                                            <?= $fullName ?>
+                                        </strong>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <?php
                 }
@@ -139,20 +137,19 @@
                     $title = $comics->title;
                     $id = $comics->id;
                     ?>
-                    <div class="col-12 col-md-3">
-                        <div class="card">
-                            <img src="<?= $image ?>" alt="<?= $title ?>">
-                            <div class="card-body text-center">
-                                <p class="titulo">
-                                    <strong>
-                                        <?= $title ?>
-                                    </strong>
-                                </p>
-                                <p>
-                                    <a href="comic/<?= $id ?>" class="btn btn-warning">See more</a>
-                                </p>
+                    <div class="col-12 col-md-2">
+                        <a href="comic/<?= $id ?>">
+                            <div class="card">
+                                <img src="<?= $image ?>" alt="<?= $title ?>">
+                                <div class="card-body text-center">
+                                    <p class="titulo">
+                                        <strong>
+                                            <?= $title ?>
+                                        </strong>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <?php
                 }
