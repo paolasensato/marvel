@@ -127,6 +127,10 @@
     transition: box-shadow 0.5s ease-in-out;
 }
 
+.card-img {
+    border-radius: 20px 0 0 0;
+}
+
 .card-body:hover {
     box-shadow: inset 0 35vh 0 1px  #CF1928;
 }
@@ -138,6 +142,7 @@
 
 .titulo{
     color: #FFFFFF;
+    font-family: 'Marvel', sans-serif;
     font-size: small;
     padding-top: 10px;
 }

@@ -22,9 +22,9 @@
                 <div class="col-12 col-md-2">
                     <a href="character/<?= $id ?>">
                         <div class="card">
-                            <img src="<?= $image ?>" alt="<?= $name ?>">
+                            <img src="<?= $image ?>" alt="<?= $name ?>" class="card-img">
                             <div class="card-body text-center">
-                                <p class="titulo"><?= $name ?></p>
+                            <p class="titulo"><strong><?= $name ?></strong></p>
                             </div>
                         </div>
                     </a>

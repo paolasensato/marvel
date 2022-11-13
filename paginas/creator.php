@@ -67,22 +67,21 @@
                             $extension = $comics->thumbnail->extension;
                             $image = $path . $imageSizeUrl . $extension;
                             ?>
-                            <div class="col-12 col-md-3">
-                                <div class="card">
-                                    <img src="<?= $image ?>" alt="<?= $title ?>">
-                                    <div class="card-body text-center">
-                                        <p class="titulo">
-                                            <strong>
-                                                <?= $title ?>
-                                            </strong>
-                                        </p>
-                                        <p>
-                                            <a href="comic/<?= $id ?>" class="btn btn-warning">See more</a>
-                                        </p>
+                            <div class="col-12 col-md-2">
+                                <a href="comic/<?= $id ?>">
+                                    <div class="card">
+                                        <img src="<?= $image ?>" alt="<?= $title ?>">
+                                        <div class="card-body text-center">
+                                            <p class="titulo">
+                                                <strong>
+                                                    <?= $title ?>
+                                                </strong>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
                         </div>
@@ -97,32 +96,31 @@
                         ?>
                         <h2 class="text-center head-font py-5">Events</h2>
                         <div class="row text-center">
-                            <?php
-                        foreach ($dados->data->results as $events) {
-                            $id = $events->id;
-                            $title = $events->title;
-                            $path = $events->thumbnail->path;
-                            $extension = $events->thumbnail->extension;
-                            $image = $path .$imageSizeUrl. $extension;
-                            ?>
-                            <div class="col-12 col-md-3">
-                                <div class="card">
-                                    <img src="<?= $image ?>" alt="<?= $title ?>">
-                                    <div class="card-body text-center">
-                                        <p class="titulo">
-                                            <strong>
-                                                <?= $title ?>
-                                            </strong>
-                                        </p>
-                                        <p>
-                                            <a href="event/<?= $id ?>" class="btn btn-warning">See more</a>
-                                        </p>
-                                    </div>
+                        <?php
+                            foreach ($dados->data->results as $events) {
+                                $id = $events->id;
+                                $title = $events->title;
+                                $path = $events->thumbnail->path;
+                                $extension = $events->thumbnail->extension;
+                                $image = $path .$imageSizeUrl. $extension;
+                                ?>
+                                <div class="col-12 col-md-2">
+                                    <a href="event/<?= $id ?>">
+                                        <div class="card">
+                                            <img src="<?= $image ?>" alt="<?= $title ?>">
+                                            <div class="card-body text-center">
+                                                <p class="titulo">
+                                                    <strong>
+                                                        <?= $title ?>
+                                                    </strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
                             <?php
-                        }
-                        ?>
+                            }
+                            ?>
                         </div>
                         <?php
                     }

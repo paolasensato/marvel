@@ -22,9 +22,13 @@
             <div class="col-12 col-md-2">
                 <a href="comic/<?= $id?>">
                     <div class="card">
-                        <img src="<?= $image ?>" alt="<?= $title ?>">
+                        <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img">
                         <div class="card-body text-center">
-                            <p class="titulo"><?= $title ?></p>
+                            <p class="titulo">
+                                <strong>
+                                    <?= $title ?>
+                                </strong>
+                            </p>
                         </div>
                     </div>
                 </a>
