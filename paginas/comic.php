@@ -134,41 +134,6 @@
                             </div>
                             <?php
                         }
-                        
-                        $arquivo = "{$url}/comics/{$id}/creators?{$apiKey}";
-                        $dados = file_get_contents($arquivo);
-                        $dados = json_decode($dados);
-                        
-                        if(!empty($dados->data->results)){
-                            ?>
-                                <h2 class="text-center head-font py-5">Creators</h2>
-                                <div class="row text-center">
-                                    <?php
-                                    foreach ($dados->data->results as $creators) {
-                                        $path = $creators->thumbnail->path;
-                                        $extension = $creators->thumbnail->extension;
-                                        $image = $path .$imageSizeUrl. $extension;
-                                        $id = $creators->id;
-                                        $fullName = $creators->fullName;
-                                        ?>
-                                        <div class="col-12 col-md-2">
-                                            <a href="creators/<?= $id ?>">
-                                                <div class="card">
-                                                    <img src="<?= $image ?>" alt="<?=  $fullName ?>" class="card-img w-100">
-                                                    <div class="card-body text-center">
-                                                        <p class="titulo">
-                                                            <strong><?= $fullName ?></strong>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    <?php
-                                    }
-                                    ?>
-                                </div>
-                            <?php
-                    }
         }
     ?>
             </div>
