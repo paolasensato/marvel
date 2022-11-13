@@ -1,54 +1,53 @@
 <div class="bg-character p-5">
     <div>
         <?php
-    $id = $param[1] ?? null;
+            $id = $param[1] ?? null;
 
-    if (empty($id)) {
-        ?>
-        <p class="alert alert-danger text-center">
-            Oops! Invalid character!
-        </p>
-        <?php
-    } else {
-        $arquivo = "{$url}/characters/{$id}?{$apiKey}";
-        $dados = file_get_contents($arquivo);
-        $dados = json_decode($dados);
+            if (empty($id)) {
+                ?>
+                <p class="alert alert-danger text-center">
+                    Oops! Invalid character!
+                </p>
+                <?php
+            } else {
+                $arquivo = "{$url}/characters/{$id}?{$apiKey}";
+                $dados = file_get_contents($arquivo);
+                $dados = json_decode($dados);
 
-        $character = $dados->data->results[0];
+                $character = $dados->data->results[0];
 
-        $path = $character->thumbnail->path;
-$extension = $character->thumbnail->extension;
-$image = $path . $imageSizeUrl . $extension;
-$name = $character->name;
-$description = $character->description;
+                $path = $character->thumbnail->path;
+                $extension = $character->thumbnail->extension;
+                $image = $path . $imageSizeUrl . $extension;
+                $name = $character->name;
+                $description = $character->description;
 
-?>
-<div class="container box-principal glass-effect">
-    <div class="row">
-        <div class="col-12 col-md-3">
-            <img src="<?= $image ?>" alt="<?= $name ?>" class="w-100 box-img">
-        </div>
-        <div class="col-12 col-md-9 p-4">
-            <h3 class="text-center head-font py-3"><?= $name ?></h3>
-            <?php 
-                    if(empty($description)) {
-                        ?>
-                            <p>
-                                Description not available. For more information 
-                                <a href="https://www.marvel.com/" target="blank">click here</a>
-                            </p>
-                            <?php
-                    } else {
-                        ?>
-                            <p><?= $description ?></p>
-                            <?php
-                    }
-                    ?>
-            </p>
-        </div>
+                ?>
+                <div class="container box-principal glass-effect">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <img src="<?= $image ?>" alt="<?= $name ?>" class="w-100 box-img">
+                        </div>
+                        <div class="col-12 col-md-9 p-4">
+                            <h3 class="text-center head-font py-3"><?= $name ?></h3>
+                            <?php 
+                                if(empty($description)) {
+                                    ?>
+                                        <p>
+                                            Description not available. For more information 
+                                            <a href="https://www.marvel.com/" target="blank">click here</a>
+                                        </p>
+                                        <?php
+                                } else {
+                                    ?>
+                                        <p><?= $description ?></p>
+                                        <?php
+                                }
+                                ?>
+                        </div>
+                    </div>
+                </div>
     </div>
-</div>
-</div>
 </div>
 
 <div class="container">

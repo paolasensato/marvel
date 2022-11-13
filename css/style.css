@@ -67,8 +67,20 @@
     text-shadow: 0 0 0.5rem #4F4F4F;
 }
 
-.bg-character{
+.bg-character {
     background-image: url(../images/background-character.jpg);
+}
+
+.bg-comic {
+    background-image: url(../images/background-comic.jpg);
+}
+
+.bg-event {
+    background-image: url(../images/background-event.jpg);
+}
+
+.bg-creator {
+    background-image: url(../images/background-creator.jpg);
 }
 
 .glass-effect {
