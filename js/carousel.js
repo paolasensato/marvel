@@ -1,7 +1,7 @@
 const sliderComics = document.querySelector("#carousel-comics");
 const sliderEvents = document.querySelector("#carousel-events");
 
-const cardPadding = 8;
+const cardPadding = 18;
 const scrollPerClickComics = (cardPadding + document.querySelector("#img-comics").clientWidth);
 const scrollPerClickEvents = (cardPadding + document.querySelector("#img-events").clientWidth);
 
