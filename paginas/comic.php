@@ -21,6 +21,11 @@
             $path = $comic->thumbnail->path;
             $extension = $comic->thumbnail->extension;
             $image = $path . $imageSizeUrl . $extension;
+            foreach($comic->urls as $detail){
+                if ($detail->type == "detail") {
+                    $urlDetail = $detail->url;
+                }
+            }
             ?>
         
             <div class="container box-principal glass-effect">
@@ -35,14 +40,53 @@
                                 if(empty($description)) {
                                     ?>
                                         <p>
-                                            Description not available. For more information 
-                                            <a href="https://www.marvel.com/" target="blank">click here</a>
+                                            Description not available. For more information click see more
                                         </p>
+                                        <a href="<?= $urlDetail?>">
+                                            <button class="btn btn-outline-light">See More</button>
+                                        </a>
                                         <?php
                                 } else {
                                     ?>
                                         <p><?= $description ?></p>
-                                        <?php
+                                        <div class="creators">
+                                            <?php
+                                            if($comic->creators != null) {
+
+                                                foreach ($comic->creators->items as $creator) {
+                                                    $role = $creator->role;
+                                                    $name = $creator->name;
+                                                    if ($role == "writer") {
+                                                        $writer = $name;
+                                                    } elseif ($role == "penciller" || $role == "penciller (cover)") {
+                                                        $penciller = $name;
+                                                    }
+                                                }
+                                                ?>
+                                                <div class="writer">
+                                                    <div>
+                                                        <p class="title"><strong>Writer:</strong></p>
+                                                    </div>
+                                                    <div>
+                                                       <p><?=$writer?></p>
+                                                    </div>
+                                                </div>
+                                                <div class="penciler">
+                                                    <div>
+                                                        <p class="title"><strong>Penciller:</strong></p>
+                                                    </div>
+                                                    <div>
+                                                        <p><?=$penciller?></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                            }
+                                            ?>
+                                            <a href="<?= $urlDetail?>">
+                                                <button class="btn btn-outline-light">See More</button>
+                                            </a>
+                                            <?php
                                 }
                                 ?>
                         </p>
