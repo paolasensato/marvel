@@ -140,7 +140,7 @@
 }
 
 .card:hover {
-    box-shadow: inset 0 65vh 0 1px  #CF1928;
+    box-shadow: inset 0 80vh 0 1px  #CF1928;
 }
 
 .card-body {
@@ -184,7 +184,7 @@ a:hover {
 
 .carousel-inner {
     width: auto;
-    height: 370px;
+    height: auto;
     overflow: hidden;
 }
 

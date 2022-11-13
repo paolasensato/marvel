@@ -26,7 +26,7 @@
                             <div class="card h-100 border-0">
                                 <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img" id="img-comics">
                                 <div class="card-body">
-                                    <p class="titulo"><?= $title ?></p>
+                                    <p class="titulo"><strong><?= $title ?></strong></p>
                                 </div>
                             </div>
                         </a>
