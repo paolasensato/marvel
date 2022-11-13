@@ -35,13 +35,11 @@
                 }
                 ?>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev" onclick="scrollLeftComics()">
+            <button class="carousel-control-prev" type="button" onclick="scrollLeftComics()">
                 <span class="carousel-control-prev-icon bg-dark border border-dark"></span>
-                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next" onclick="scrollRightComics()">
+            <button class="carousel-control-next" type="button" onclick="scrollRightComics()">
                 <span class="carousel-control-next-icon bg-dark border border-dark"></span>
-                <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>

@@ -151,9 +151,13 @@ a {
     text-decoration: none;
 }
 
+.carousel {
+    position: relative;
+}
+
 .carousel-inner {
     width: auto;
-    height: 500px;
+    height: 370px;
     overflow: hidden;
 }
 
@@ -164,6 +168,16 @@ a {
 .carousel-inner .img-fluid {
     width: 100%;
     height: auto;
+}
+
+.carousel-control-prev {
+    position: absolute;
+    left: -6.5rem;
+}
+
+.carousel-control-next {
+    position: absolute;
+    right: -6.5rem;
 }
 
 /*CONTATO*/
@@ -232,5 +246,15 @@ input, textarea{
 
     .carousel-inner {
         height: 550px;
+    }
+
+    .carousel-control-prev {
+        position: 0;
+        left: 0;
+    }
+    
+    .carousel-control-next {
+        position: 0;
+        right: 0;
     }
 }
