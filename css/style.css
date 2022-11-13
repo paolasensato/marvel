@@ -80,14 +80,13 @@
 }
 
 .card {
-    width: 168px;
-    height: 70% !important;
+    width: auto;
+    height: auto !important;
     margin-bottom: 1.5rem;
 }
 
 .img-carousel {
     border-top-left-radius: 20px;
-    width: 168px;
     box-shadow: 0 0 0.5rem #CCC;
 }
 
@@ -105,13 +104,13 @@
 }
 
 .card .titulo {
-    height: 2rem;
+    height: 5rem;
     text-align: center;
 }
 
 .titulo{
     color: #FFFFFF;
-    font-size: medium;
+    font-size: small;
     padding-top: 10px;
 }
 
