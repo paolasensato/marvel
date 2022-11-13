@@ -22,16 +22,14 @@
                         $id = $comics->id;
                 ?>
                     <div class="col-12 col-md-2 px-1">
-                        <div class="card h-100 border-0">
-                            <img src="<?= $image ?>" alt="<?= $title ?>" class="img-carousel" id="img-comics">
-                            <div class="card-body">
-                                <p class="titulo">
-                                    <a href="comic/<?= $id ?>">
-                                        <strong><?= $title ?></strong>
-                                    </a>
-                                </p>
+                        <a href="comic/<?= $id ?>">
+                            <div class="card h-100 border-0">
+                                <img src="<?= $image ?>" alt="<?= $title ?>" class="img-carousel" id="img-comics">
+                                <div class="card-body">
+                                    <p class="titulo"><?= $title ?></p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 <?php
                 }
@@ -67,16 +65,14 @@
                         }
                 ?>
                     <div class="col-6 col-md-2 px-1">
-                        <div class="card h-100 border-0">
-                            <img src="<?= $image ?>" alt="<?= $title ?>" id="img-events">
-                            <div class="card-body">
-                                <p class="titulo">
-                                    <a href="event/<?= $id ?>">
-                                        <strong><?= $title ?></strong>
-                                    </a>
-                                </p>
+                        <a href="event/<?= $id ?>">
+                            <div class="card h-100 border-0">
+                                <img src="<?= $image ?>" alt="<?= $title ?>" id="img-events">
+                                <div class="card-body">
+                                    <p class="titulo"><?= $title ?></p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 <?php
                 }
