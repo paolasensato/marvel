@@ -64,20 +64,19 @@
                         $extension = $comics->thumbnail->extension;
                         $image = $path . $imageSizeUrl . $extension;
                         ?>
-                        <div class="col-12 col-md-3">
-                            <div class="card">
-                                <img src="<?= $image ?>" alt="<?= $title ?>">
-                                <div class="card-body text-center">
-                                    <p class="titulo">
-                                        <strong>
-                                            <?= $title ?>
-                                        </strong>
-                                    </p>
-                                    <p>
-                                        <a href="comic/<?= $id ?>" class="btn btn-warning">See more</a>
-                                    </p>
+                        <div class="col-12 col-md-2">
+                            <a href="comic/<?= $id ?>">
+                                <div class="card">
+                                    <img src="<?= $image ?>" alt="<?= $title ?>">
+                                    <div class="card-body text-center">
+                                        <p class="titulo">
+                                            <strong>
+                                                <?= $title ?>
+                                            </strong>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <?php
                     }
@@ -102,20 +101,19 @@
                         $extension = $events->thumbnail->extension;
                         $image = $path .$imageSizeUrl. $extension;
                         ?>
-                        <div class="col-12 col-md-3">
-                            <div class="card">
-                                <img src="<?= $image ?>" alt="<?= $title ?>">
-                                <div class="card-body text-center">
-                                    <p class="titulo">
-                                        <strong>
-                                            <?= $title ?>
-                                        </strong>
-                                    </p>
-                                    <p>
-                                        <a href="event/<?= $id ?>" class="btn btn-warning">See more</a>
-                                    </p>
+                        <div class="col-12 col-md-2">
+                            <a href="event/<?= $id ?>">
+                                <div class="card">
+                                    <img src="<?= $image ?>" alt="<?= $title ?>">
+                                    <div class="card-body text-center">
+                                        <p class="titulo">
+                                            <strong>
+                                                <?= $title ?>
+                                            </strong>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <?php
                     }
