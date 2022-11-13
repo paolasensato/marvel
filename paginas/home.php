@@ -64,12 +64,14 @@
                             $image = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_uncanny.jpg";
                         }
                 ?>
-                    <div class="col-6 col-md-2 px-1">
+                    <div class="col-12 col-md-2 px-1">
                         <a href="event/<?= $id ?>">
                             <div class="card h-100 border-0">
-                                <img src="<?= $image ?>" alt="<?= $title ?>" id="img-events">
+                                <img src="<?= $image ?>" alt="<?= $title ?>" id="img-events" class="img-carousel">
                                 <div class="card-body">
-                                    <p class="titulo"><?= $title ?></p>
+                                    <p class="titulo">
+                                        <strong><?= $title ?></strong>
+                                    </p>
                                 </div>
                             </div>
                         </a>
