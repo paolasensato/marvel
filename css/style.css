@@ -138,6 +138,59 @@
     height: auto;
 }
 
+/*CONTATO*/
+.font-contato {
+    color: #FFFFFF;
+    font-family: 'Marvel', sans-serif;
+}
+
+.caixa-contato{
+    background-image: linear-gradient(#960000,#ff5851);
+    width: 750px;
+    height: 750px;
+    margin: 100px auto;
+    margin-top: 100px;
+    padding: 50px 100px;
+    box-shadow: 0 0 5px #666;
+    border-radius: 2px;
+}
+
+.campo {
+    margin-bottom: 0.8em;
+}
+
+.botao {
+    font-family: sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    color: whitesmoke;
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.botao:hover {
+    background: whitesmoke;
+    color: #cf1928;
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+.icone{
+    padding-right: 4px;
+}
+
+input, textarea{
+    padding: 10px;
+    margin: 2px;
+    border: 0;
+    border-radius: 4px;
+    font-family: 'Marvel', sans-serif;
+    outline: 0; /*tira borda de seleção do campo do formulário selecionado*/
+}
+
+
 @media screen and (max-width: 830px) {
     #titulo-principal {
         padding-top: 250px ;
