@@ -118,7 +118,7 @@
                                         <a href="creator/<?= $id ?>" class="btn btn-warning"> See more</a>
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <?php
                     }
