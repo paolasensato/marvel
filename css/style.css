@@ -120,8 +120,7 @@
 .titulo a {
     text-decoration: none;
     color: #FFFFFF;
-    font-family: 'Marvel', sans-serif;
-    font-size: medium;
+    font-size: small;
 }
 
 .carousel-inner {
