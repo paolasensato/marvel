@@ -24,7 +24,7 @@
                     <div class="col-12 col-md-2 px-1">
                         <a href="comic/<?= $id ?>">
                             <div class="card h-100 border-0">
-                                <img src="<?= $image ?>" alt="<?= $title ?>" class="img-carousel" id="img-comics">
+                                <img src="<?= $image ?>" alt="<?= $title ?>" class="card-img" id="img-comics">
                                 <div class="card-body">
                                     <p class="titulo"><?= $title ?></p>
                                 </div>
@@ -67,7 +67,7 @@
                     <div class="col-12 col-md-2 px-1">
                         <a href="event/<?= $id ?>">
                             <div class="card h-100 border-0">
-                                <img src="<?= $image ?>" alt="<?= $title ?>" id="img-events" class="img-carousel">
+                                <img src="<?= $image ?>" alt="<?= $title ?>" id="img-events" class="card-img">
                                 <div class="card-body">
                                     <p class="titulo">
                                         <strong><?= $title ?></strong>
