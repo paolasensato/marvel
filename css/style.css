@@ -91,10 +91,6 @@
     box-shadow: 0 0 0.5rem #CCC;
 }
 
-.btn {
-    border-radius: 0;
-}
-
 .card-body {
     box-shadow: inset 0 3px 0 0 #CF1928;
     padding: 0;
@@ -114,13 +110,13 @@
 }
 
 .titulo{
+    color: #FFFFFF;
+    font-size: medium;
     padding-top: 10px;
 }
 
-.titulo a {
+a {
     text-decoration: none;
-    color: #FFFFFF;
-    font-size: small;
 }
 
 .carousel-inner {
