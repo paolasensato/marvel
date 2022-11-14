@@ -54,8 +54,11 @@
                                                     $name = $creator->name;
                                                     if ($role == "writer") {
                                                         $writer = $name;
-                                                    } elseif ($role == "penciller" || $role == "penciller (cover)") {
+                                                    } elseif ($role == "penciller" || $role == "penciller (cover)" || "penciler") {
                                                         $penciller = $name;
+                                                    } else {
+                                                        $penciller = "";
+                                                        $writer = "";
                                                     }
                                                 }
                                                 ?>

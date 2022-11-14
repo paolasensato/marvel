@@ -36,10 +36,10 @@
                 ?>
             </div>
             <button class="carousel-control-prev" type="button" onclick="scrollLeftComics()">
-                <span class="carousel-control-prev-icon bg-dark border border-dark"></span>
+                <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" onclick="scrollRightComics()">
-                <span class="carousel-control-next-icon bg-dark border border-dark"></span>
+                <span class="carousel-control-next-icon"></span>
             </button>
         </div>
     </div>
@@ -79,11 +79,11 @@
                 ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev" onclick="scrollLeftEvents()">
-                <span class="carousel-control-prev-icon bg-dark border border-dark"></span>
+                <span class="carousel-control-prev-icon"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next" onclick="scrollRightEvents()">
-                <span class="carousel-control-next-icon bg-dark border border-dark"></span>
+                <span class="carousel-control-next-icon"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
