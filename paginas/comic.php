@@ -79,10 +79,10 @@
                                                         <p><?=$penciller?></p>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <?php
+                                                <?php
                                             }
                                             ?>
+                                        </div>
                                             <a href="<?= $urlDetail?>">
                                                 <button class="btn btn-outline-light">See More</button>
                                             </a>

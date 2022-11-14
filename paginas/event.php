@@ -10,13 +10,18 @@
                 $dados = file_get_contents($arquivo);
                 $dados = json_decode($dados);
                 
-                $comic = $dados->data->results[0];
+                $event = $dados->data->results[0];
                 
-                $title = $comic->title;
-                $description = $comic->description;
-                $path = $comic->thumbnail->path;
-                $extension = $comic->thumbnail->extension;
+                $title = $event->title;
+                $description = $event->description;
+                $path = $event->thumbnail->path;
+                $extension = $event->thumbnail->extension;
                 $image = $path .$imageSizeUrl. $extension;
+                foreach($event->urls as $detail){
+                    if ($detail->type == "detail") {
+                        $urlDetail = $detail->url;
+                    }
+                }
                 ?>
 
                 <div class="container box-principal glass-effect">
@@ -31,13 +36,85 @@
                                     if(empty($description)) {
                                         ?>
                                             <p>
-                                                Description not available. For more information 
-                                                <a href="https://www.marvel.com/" target="blank">click here</a>
+                                                Description not available. For more information click see more
                                             </p>
+                                            <a href="<?= $urlDetail?>">
+                                                <button class="btn btn-outline-light">See More</button>
+                                             </a>
                                             <?php
                                     } else {
                                         ?>
                                             <p><?= $description ?></p>
+                                            <h5 class="title-h5"><strong>Creators:</strong></h5>
+                                            <div class="creators">
+                                                <?php
+                                                if($event->creators != null) {
+
+                                                    foreach ($event->creators->items as $creator) {
+                                                        $role = $creator->role;
+                                                        $name = $creator->name;
+                                                        if ($role == "writer") {
+                                                            $writer = $name;
+                                                        } elseif ($role == "penciller" || $role == "penciller (cover)") {
+                                                            $penciller = $name;
+                                                        }
+                                                    }
+                                                    ?>
+                                                    <div class="writer">
+                                                        <div>
+                                                            <p class="title"><strong>Writer:</strong></p>
+                                                        </div>
+                                                        <div>
+                                                        <p><?=$writer?></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="penciler">
+                                                        <div>
+                                                            <p class="title"><strong>Penciller:</strong></p>
+                                                        </div>
+                                                        <div>
+                                                            <p><?=$penciller?></p>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </div>
+
+                        
+                                            <h5 class="title-h5"><strong>Dates:</strong></h5>
+                                            <div class="dates">
+                                                <?php
+                                                    $start = $event->start;
+                                                    $end = $event->end;
+
+                                                    $start = strtotime($start);
+                                                    $end = strtotime($end);
+
+                                                    $formatStart = date('d/M/Y', $start);
+                                                    $formatEnd = date('d/M/Y', $end);
+                                                ?>
+                                                <div class="start">
+                                                    <div>
+                                                        <p class="title-dates"><strong>Start:</strong></p>
+                                                    </div>
+                                                    <div>
+                                                    <p><?=$formatStart?></p>
+                                                    </div>
+                                                </div>
+                                                <div class="end">
+                                                    <div>
+                                                        <p class="title-dates"><strong>End:</strong></p>
+                                                    </div>
+                                                    <div>
+                                                        <p><?=$formatEnd?></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a href="<?= $urlDetail?>">
+                                                <button class="btn btn-outline-light">See More</button>
+                                             </a>
                                             <?php
                                     }
                                     ?>
@@ -85,44 +162,6 @@
                                 ?>
                         </div>
                     <?php
-                    }
-                    
-                
-                    $arquivo = "{$url}/events/{$id}/creators?{$apiKey}";
-                    $dados = file_get_contents($arquivo);
-                    $dados = json_decode($dados);
-                    
-                    if (!empty($dados->data->results)) {
-                        ?>
-                        <h2 class="text-center head-font py-5">Creators</h2>
-                        <div class="row text-center">
-                            <?php
-                            foreach ($dados->data->results as $creators) {
-                                $path = $creators->thumbnail->path;
-                                $extension = $creators->thumbnail->extension;
-                                $image = $path .$imageSizeUrl. $extension;
-                                $id = $creators->id;
-                                $fullName = $creators->fullName;
-                                ?>
-                                <div class="col-12 col-md-2">
-                                    <a href="creator/<?= $id ?>">
-                                        <div class="card">
-                                            <img src="<?= $image ?>" alt="<?= $fullName ?>" class="card-img w-100">
-                                            <div class="card-body text-center">
-                                                <p class="titulo">
-                                                    <strong>
-                                                        <?= $fullName ?>
-                                                    </strong>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            <?php
-                            }
-                            ?>
-                        </div>
-                        <?php
                     }
                     
                     $arquivo = "{$url}/events/{$id}/comics?{$apiKey}";

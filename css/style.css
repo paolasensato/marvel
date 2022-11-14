@@ -107,26 +107,45 @@
 }
 
 .creators {
-    width: 500px;
-    height: 6rem;
+    display: flex;
+    flex-direction: row;
     margin: auto;
-    padding-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 20px;
 }
 
-.writer{
-    float: left;
-}
-
-.penciler {
-    float: right;
+.writer, .penciler, .start, .end {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.writer p, .penciler p{
-    margin: 0 0 4px !important;
+.title-h5 {
+    padding-right: 45rem;
+}
+
+.title-dates, .title {
+    font-size: 18px;
+}
+
+.dates-titles {
+    flex-direction: column;
+}
+
+.writer p, .penciler p, .start p, .end p{
+    margin: 0 0 0 !important;
+}
+
+.dates {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 20px;
 }
 
 .card {
@@ -175,7 +194,8 @@ a:hover {
 }
 
 .btn {
-    transition: all 1s;
+    transition: all 1.2s;
+    font-weight: bold;  
 }
 
 .carousel {
