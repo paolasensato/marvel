@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="images/icons8-vingadores-144.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 
 <body>
@@ -73,10 +74,15 @@
         ?>
     </main>
 
-    <footer class="bg-light">
-        <p class="text-center">
-            Desenvolvido por Paola e Kleber
-        </p>
+    <footer class="bg-footer">
+        <div class="footer-inner">
+            <p>
+                Developed by Paola Sensato e Kleber Trugilo
+            </p>
+            <a href="https://github.com/paolasensato/marvel" target="_blank" class="fs-1" alt="github">
+                <i class="fab fa-github-square"></i>
+            </a>  
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
