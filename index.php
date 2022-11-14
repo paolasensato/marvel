@@ -79,7 +79,7 @@
             <p>
                 Developed by Paola Sensato e Kleber Trugilo
             </p>
-            <a href="https://github.com/paolasensato/marvel" target="_blank" class="fs-1" alt="github">
+            <a href="https://github.com/paolasensato/marvel" target="blank" class="fs-1" alt="github">
                 <i class="fab fa-github-square"></i>
             </a>  
         </div>

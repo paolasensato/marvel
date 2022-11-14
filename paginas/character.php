@@ -35,9 +35,9 @@
                                 if(empty($description)) {
                                     ?>
                                     <p>
-                                        Description not available. For more information click see more
+                                        Description not available. For more information click on see more.
                                     </p>
-                                    <a href="<?= $urlDetail?>">
+                                    <a href="<?= $urlDetail?>" target="blank">
                                         <button class="btn btn-outline-light">See More</button>
                                     </a>
                                     <?php
@@ -45,7 +45,7 @@
                                     ?>
                                     <p><?= $description ?></p>
 
-                                    <a href="<?= $urlDetail?>">
+                                    <a href="<?= $urlDetail?>" target="blank">
                                         <button class="btn btn-outline-light">See More</button>
                                     </a>
                                     <?php

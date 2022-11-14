@@ -4,11 +4,7 @@
         $id = $param[1] ?? null;
         
         if (empty($id)) {
-            ?>
-            <p class="alert alert-danger text-center">
-                Oops! Invalid comic!
-            </p>
-            <?php
+            include 'erro.php';
         } else {
             $arquivo = "{$url}/comics/{$id}?{$apiKey}";
             $dados = file_get_contents($arquivo);
@@ -40,9 +36,9 @@
                                 if(empty($description)) {
                                     ?>
                                         <p>
-                                            Description not available. For more information click see more
+                                            Description not available. For more information click on see more.
                                         </p>
-                                        <a href="<?= $urlDetail?>">
+                                        <a href="<?= $urlDetail?>" target="blank">
                                             <button class="btn btn-outline-light">See More</button>
                                         </a>
                                         <?php
