@@ -19,7 +19,7 @@
                 <textarea rows="8" style="width: 26em" type="text" id="mensagem" name="mensagem" placeholder="Message" autocomplete="off"></textarea>
             </div>
             <div class="campo">
-                <button class="botao" type="button" onClick="messageSent()" title="enviar">
+                <button class="botao" type="submit" onClick="messageSent()" title="enviar">
                 <i class="fa fa-paper-plane icone" aria-hidden="true"></i>Send</button> 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>                
             </div>         
