@@ -17,6 +17,11 @@
                 $image = $path . $imageSizeUrl . $extension;
                 $name = $character->name;
                 $description = $character->description;
+                foreach($character->urls as $detail){
+                    if ($detail->type == "detail") {
+                        $urlDetail = $detail->url;
+                    }
+                }
 
 ?>
                 <div class="container box-principal glass-effect">
@@ -29,15 +34,21 @@
                             <?php 
                                 if(empty($description)) {
                                     ?>
-                                        <p>
-                                            Description not available. For more information 
-                                            <a href="https://www.marvel.com/" target="blank">click here</a>
-                                        </p>
-                                        <?php
+                                    <p>
+                                        Description not available. For more information click see more
+                                    </p>
+                                    <a href="<?= $urlDetail?>">
+                                        <button class="btn btn-outline-light">See More</button>
+                                    </a>
+                                    <?php
                                 } else {
                                     ?>
-                                        <p><?= $description ?></p>
-                                        <?php
+                                    <p><?= $description ?></p>
+
+                                    <a href="<?= $urlDetail?>">
+                                        <button class="btn btn-outline-light">See More</button>
+                                    </a>
+                                    <?php
                                 }
                                 ?>
                         </div>
