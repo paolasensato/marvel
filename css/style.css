@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0.571) !important;
     width: 100%;
     z-index: 10; /*não deixa que o scale dos cards fique sobrepondo o header*/
     position: fixed;
@@ -36,6 +36,30 @@
     width: 100%;
     height: 700px;
     margin-bottom: 50px;
+}
+
+.banner-erro {
+    background-image: url(../images/thanus1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    color: #FFFFFF;
+    font-family:'Marvel', sans-serif;
+    font-size: large;
+    position: fixed;
+}
+
+.erro {
+    background-color: rgba(68, 11, 19, 0.654);
+    margin: 150px 0 0 0 ; /* topo | direita | inferior | esquerda */
+    float: left;
+    padding: 50px;
+    width: 600px;
+    height: 500px;
+}
+
+.page-not-found h1{
+    font-size: 160px;
 }
 
 .banner-home{
