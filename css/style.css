@@ -112,14 +112,13 @@
 }
 
 footer {
-    height: 15rem;
-    margin-top: 3rem;
+    height: 10rem;
 }
 
 .footer-inner {
     font-family: 'Marvel', sans-serif;
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 2rem;
     color: #CCC;
 }
 
